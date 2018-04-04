@@ -13,4 +13,10 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})-> name('home');
+
+Route::resource('gems', 'GemController');
+
+Route::resource('metals', 'MetalsController');
+
+Route::resource('tools', 'ToolsController');
