@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class GemController extends Controller
+class JewelryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class GemController extends Controller
      */
     public function index()
     {
-        return view('gems.index');
+        return view('jewelry.index');
     }
 
     /**
@@ -23,7 +23,7 @@ class GemController extends Controller
      */
     public function create()
     {
-        return view('gems.create_form');
+        //
     }
 
     /**
@@ -45,8 +45,7 @@ class GemController extends Controller
      */
     public function show($id)
     {
-        $gems = Gem::find($id);
-        return view('gems.show', compact('gems'));
+        //
     }
 
     /**
