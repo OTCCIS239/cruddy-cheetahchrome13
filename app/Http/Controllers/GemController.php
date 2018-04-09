@@ -45,7 +45,10 @@ class GemController extends Controller
      */
     public function show($id)
     {
+        // $gems = Task::findOrFail($id);
+        // return view('gems.show')->withTask($gems);
         return view('gems.rubies');
+        return view('gems.agates');
     }
 
     /**
