@@ -16,8 +16,8 @@ Route::get('/', function () {
 })-> name('home');
 
 Route::resource('gems', 'GemController');
-Route::get('gems/{rubies}', 'GemController@show');
-Route::get('gems/create_form', 'GemController@create');
+//Route::get('gems/{rubies}', 'GemController@show');
+//Route::get('gems/create_form', 'GemController@create');
 
 Route::resource('metals', 'MetalsController');
 Route::get('metals/{silver}', 'MetalsController@show');
