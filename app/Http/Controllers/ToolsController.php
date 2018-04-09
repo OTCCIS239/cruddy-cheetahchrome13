@@ -23,7 +23,7 @@ class ToolsController extends Controller
      */
     public function create()
     {
-        //
+        return view('tools.create_form');
     }
 
     /**
@@ -45,7 +45,7 @@ class ToolsController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('tools.pliers');
     }
 
     /**

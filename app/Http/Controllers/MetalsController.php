@@ -23,7 +23,7 @@ class MetalsController extends Controller
      */
     public function create()
     {
-        //
+        return view('metals.create_form');
     }
 
     /**
@@ -45,7 +45,7 @@ class MetalsController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('metals.silver');
     }
 
     /**

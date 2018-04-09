@@ -23,7 +23,7 @@ class JewelryController extends Controller
      */
     public function create()
     {
-        //
+        return view('jewelry.create_form');
     }
 
     /**
@@ -45,7 +45,7 @@ class JewelryController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('jewelry.rings');
     }
 
     /**

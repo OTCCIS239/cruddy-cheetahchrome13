@@ -45,8 +45,7 @@ class GemController extends Controller
      */
     public function show($id)
     {
-        $gems = Gem::find($id);
-        return view('gems.show', compact('gems'));
+        return view('gems.rubies');
     }
 
     /**

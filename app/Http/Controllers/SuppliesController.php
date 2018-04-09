@@ -23,7 +23,7 @@ class SuppliesController extends Controller
      */
     public function create()
     {
-        //
+        return view('supplies.create_form');
     }
 
     /**
@@ -45,7 +45,7 @@ class SuppliesController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('supplies.saw_blades');
     }
 
     /**
