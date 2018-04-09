@@ -2,6 +2,6 @@
 
 @section('content')
     <h1>This is the metals page</h1>
-    <a href="{{ url('metals/silver') }}">Silver </a>
-    <a href="{{ url('metals/create_form') }}"> Create</a>
+    <a href="metals/silver">Silver </a>
+    <a href="metals/create"> Create</a>
 @stop
