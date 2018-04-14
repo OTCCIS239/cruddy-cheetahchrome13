@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Tool;
 
 class ToolsController extends Controller
 {
@@ -13,7 +14,10 @@ class ToolsController extends Controller
      */
     public function index()
     {
-        return view('tools.index');
+        //these are right
+        $tools = Tool::all();
+        return view('tools.index', $tools);
+        //return view('tools.index');
     }
 
     /**
@@ -23,7 +27,7 @@ class ToolsController extends Controller
      */
     public function create()
     {
-        return view('tools.create_form');
+        return view('tools.create');
     }
 
     /**
@@ -45,7 +49,10 @@ class ToolsController extends Controller
      */
     public function show($id)
     {
-        return view('tools.pliers');
+        //these are right
+        $a_tool = Tool::findOrFail($id);
+        return view('tools.show', $a_tool);
+        //return view('tools.show');
     }
 
     /**

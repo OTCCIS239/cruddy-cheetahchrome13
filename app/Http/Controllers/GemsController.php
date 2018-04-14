@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Supply;
+use App\Gem;
 
-class SuppliesController extends Controller
+class GemsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,13 @@ class SuppliesController extends Controller
      */
     public function index()
     {
+        ////maybe wrong since I have a Gem model 
+        //$allGems = DB::table('gems')->get();
+
         //these are right
-        $supplies = Supply::all();
-        return view('supplies.index', $supplies);
-        //return view('supplies.index');
+        $gems = Gem::all();
+        return view('gems.index', $gems);
+        //return view('gems.index');
     }
 
     /**
@@ -27,7 +30,7 @@ class SuppliesController extends Controller
      */
     public function create()
     {
-        return view('supplies.create');
+        return view('gems.create');
     }
 
     /**
@@ -50,9 +53,9 @@ class SuppliesController extends Controller
     public function show($id)
     {
         //these are right
-        $a_supply = Supply::findOrFail($id);
-        return view('supplies.show', $a_supply);
-        //return view('supplies.show');
+        $a_gem = Gem::findOrFail($id);
+        return view('gems.show', $a_gem);
+        //return view('gems.show');
     }
 
     /**

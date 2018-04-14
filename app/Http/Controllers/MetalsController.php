@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Metal;
 
 class MetalsController extends Controller
 {
@@ -13,7 +14,10 @@ class MetalsController extends Controller
      */
     public function index()
     {
-        return view('metals.index');
+        //these are right
+        $metals = Metal::all();
+        return view('metals.index', $metals);
+        //return view('metals.index');
     }
 
     /**
@@ -23,7 +27,7 @@ class MetalsController extends Controller
      */
     public function create()
     {
-        return view('metals.create_form');
+        return view('metals.create');
     }
 
     /**
@@ -45,7 +49,10 @@ class MetalsController extends Controller
      */
     public function show($id)
     {
-        return view('metals.silver');
+        //these are right
+        $a_metal = Metal::findOrFail($id);
+        return view('metals.show', $a_metal);
+        //return view('metals.show');
     }
 
     /**

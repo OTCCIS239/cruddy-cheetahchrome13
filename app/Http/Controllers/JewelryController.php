@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Jewelry;
 
 class JewelryController extends Controller
 {
@@ -13,7 +14,10 @@ class JewelryController extends Controller
      */
     public function index()
     {
-        return view('jewelry.index');
+        //these are right
+        $jewelries = Jewelry::all();
+        return view('jewelry.index', $jewelries);
+        //return view('jewelry.index');
     }
 
     /**
@@ -23,7 +27,7 @@ class JewelryController extends Controller
      */
     public function create()
     {
-        return view('jewelry.create_form');
+        return view('jewelry.create');
     }
 
     /**
@@ -45,7 +49,10 @@ class JewelryController extends Controller
      */
     public function show($id)
     {
-        return view('jewelry.rings');
+         //these are right
+        $a_jewelry = Jewelry::findOrFail($id);
+        return view('jewelry.show', $a_jewelry);
+        //return view('jewelry.show');
     }
 
     /**

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGemsTable extends Migration
+class CreateJewelriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,15 @@ class CreateGemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('gems', function (Blueprint $table) {
+        Schema::create('jewelries', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('type');
-            $table->string('cut');
-            $table->string('size');
             $table->text('description');
             $table->unsignedDecimal('price', 8, 2);
             $table->unsignedInteger('stock');
-            $table->string('img')->default('images/default.jpg');          
-            $table->timestamps();    
+            $table->string('img')->default('images/default.jpg');           
+            $table->timestamps();
         });
     }
 
@@ -34,6 +32,6 @@ class CreateGemsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gems');
+        Schema::dropIfExists('jewelries');
     }
 }
