@@ -17,7 +17,7 @@
 
                                     <table class="table table-striped table-dark">
                                     @foreach ($jewelries as $jewelry)
-                                        $price = "$".number_format({{ $jewelry->price }}, 2);
+                                        <!--$price = "$".number_format({{ $jewelry->price }}, 2);-->
                                     <!--<table class="table table-striped table-dark">-->
                                         <tr>
                                             <th scope="col">Jewelry ID</th>
@@ -30,11 +30,11 @@
                                             <td><a class="btn btn-primary" href="jewelry/{{ $jewelry->id }}">Details <i class="fas fa-chevron-right"></i></a></td>
                                             <td>{{ $jewelry->name }}</td>
                                             <td>{{ $jewelry->type }}</td>
-                                            <td class="text-right">{{ $price }}</td>
+                                            <td class="text-right">{{ $jewelry->price }}</td>
                                         </tr>
                                        
                                     <!--</table>-->       
-                                    @endforeach;
+                                    @endforeach
                                     </table>
 
                                 </div>      

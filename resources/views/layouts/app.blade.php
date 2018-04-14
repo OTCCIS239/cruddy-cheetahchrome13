@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
 
+    <!-- My styles -->
+    <link rel="stylesheet" type="text/css" href='@php (Route::is('home')) ? "./assets/cruddy.css" : "../assets/cruddy.css";  @endphp'/>
+
     <title>On the Bench</title>
     <style type="text/css">
         li.active a {

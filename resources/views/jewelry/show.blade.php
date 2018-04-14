@@ -1,10 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <!--<h1>This was the rubies page...now 'gem.show'</h1>-->
-    @php
-        $price = "$".number_format({{ $a_jewelry->price }}, 2);
-    @endphp
+    
     <div class="row align-items-center" style="height: 100%;">
                     <div class="col-sm"></div>
                     <div class="col-sm-9">
@@ -47,7 +44,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $price }}</td>
+                                            <td>{{ $a_jewelry->price }}</td>
                                         </tr>
 
                                         <tr>

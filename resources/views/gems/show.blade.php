@@ -2,10 +2,8 @@
 
 @section('content')
     
-    @php
-        $price = "$".number_format({{ $a_gem->price }}, 2);
-    @endphp
     
+
     <div class="row align-items-center" style="height: 100%;">
                     <div class="col-sm"></div>
                     <div class="col-sm-9">
@@ -24,7 +22,8 @@
                                     <table class="table table-striped table-dark">
 
                                         <tr>
-                                            <th scope="col"><img src="../{{ $a_gem->img }}" alt="gem picture"></th>
+                                        <!-- need help with syntax here to display image -->
+                                            <th scope="col"><img src=".{{ $a_gem->img }}" alt="gem picture"></th>
                                         </tr>
 
                                         <tr>
@@ -48,7 +47,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $price }}</td>
+                                            <td>{{ $a_gem->price }}</td>
                                         </tr>
 
                                         <tr>

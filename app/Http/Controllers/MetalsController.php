@@ -16,7 +16,7 @@ class MetalsController extends Controller
     {
         //these are right
         $metals = Metal::all();
-        return view('metals.index', $metals);
+        return view('metals.index', compact('metals'));
         //return view('metals.index');
     }
 
@@ -51,7 +51,7 @@ class MetalsController extends Controller
     {
         //these are right
         $a_metal = Metal::findOrFail($id);
-        return view('metals.show', $a_metal);
+        return view('metals.show', compact('a_metal'));
         //return view('metals.show');
     }
 

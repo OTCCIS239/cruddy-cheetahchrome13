@@ -16,7 +16,7 @@ class ToolsController extends Controller
     {
         //these are right
         $tools = Tool::all();
-        return view('tools.index', $tools);
+        return view('tools.index', compact('tools'));
         //return view('tools.index');
     }
 
@@ -51,7 +51,7 @@ class ToolsController extends Controller
     {
         //these are right
         $a_tool = Tool::findOrFail($id);
-        return view('tools.show', $a_tool);
+        return view('tools.show', compact('a_tool'));
         //return view('tools.show');
     }
 

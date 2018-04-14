@@ -19,7 +19,8 @@ class GemsController extends Controller
 
         //these are right
         $gems = Gem::all();
-        return view('gems.index', $gems);
+        //dd($gems);
+        return view('gems.index', compact('gems'));
         //return view('gems.index');
     }
 
@@ -54,7 +55,7 @@ class GemsController extends Controller
     {
         //these are right
         $a_gem = Gem::findOrFail($id);
-        return view('gems.show', $a_gem);
+        return view('gems.show', compact('a_gem'));
         //return view('gems.show');
     }
 

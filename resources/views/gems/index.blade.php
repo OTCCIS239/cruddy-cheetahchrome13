@@ -18,7 +18,7 @@
 
                                     <table class="table table-striped table-dark">
                                     @foreach ($gems as $gem)
-                                        $price = "$".number_format({{ $gem->price }}, 2);
+                                        <!--$price = "$".number_format({{ $gem->price }}, 2);-->
                                     <!--<table class="table table-striped table-dark">-->
                                         <tr>
                                             <th scope="col">Gem ID</th>
@@ -31,11 +31,11 @@
                                             <td><a class="btn btn-primary" href="gems/{{ $gem->id }}">Details <i class="fas fa-chevron-right"></i></a></td>
                                             <td>{{ $gem->name }}</td>
                                             <td>{{ $gem->type }}</td>
-                                            <td class="text-right">{{ $price }}</td>
+                                            <td class="text-right">{{ $gem->price }}</td>
                                         </tr>
                                        
                                     <!--</table>-->       
-                                    @endforeach;
+                                    @endforeach
                                     </table>
 
                                 </div>      

@@ -17,7 +17,7 @@
 
                                     <table class="table table-striped table-dark">
                                     @foreach ($tools as $tool)
-                                        $price = "$".number_format({{ $tool->price }}, 2);
+                                        <!--$price = "$".number_format({{ $tool->price }}, 2);-->
                                     <!--<table class="table table-striped table-dark">-->
                                         <tr>
                                             <th scope="col">Tool ID</th>
@@ -30,11 +30,11 @@
                                             <td><a class="btn btn-primary" href="tools/{{ $tool->id }}">Details <i class="fas fa-chevron-right"></i></a></td>
                                             <td>{{ $tool->name }}</td>
                                             <td>{{ $tool->type }}</td>
-                                            <td class="text-right">{{ $price }}</td>
+                                            <td class="text-right">{{ $tool->price }}</td>
                                         </tr>
                                        
                                     <!--</table>-->       
-                                    @endforeach;
+                                    @endforeach
                                     </table>
 
                                 </div>      

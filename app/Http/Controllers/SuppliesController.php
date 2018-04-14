@@ -16,7 +16,7 @@ class SuppliesController extends Controller
     {
         //these are right
         $supplies = Supply::all();
-        return view('supplies.index', $supplies);
+        return view('supplies.index', compact('supplies'));
         //return view('supplies.index');
     }
 
@@ -51,7 +51,7 @@ class SuppliesController extends Controller
     {
         //these are right
         $a_supply = Supply::findOrFail($id);
-        return view('supplies.show', $a_supply);
+        return view('supplies.show', compact('a_supply'));
         //return view('supplies.show');
     }
 

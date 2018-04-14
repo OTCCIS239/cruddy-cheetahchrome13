@@ -2,9 +2,6 @@
 
 @section('content')
     
-    @php
-        $price = "$".number_format({{ $a_metal->price }}, 2);
-    @endphp
     <div class="row align-items-center" style="height: 100%;">
                     <div class="col-sm"></div>
                     <div class="col-sm-9">
@@ -47,7 +44,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $price }}</td>
+                                            <td>{{ $a_metal->price }}</td>
                                         </tr>
 
                                         <tr>

@@ -16,7 +16,7 @@ class JewelryController extends Controller
     {
         //these are right
         $jewelries = Jewelry::all();
-        return view('jewelry.index', $jewelries);
+        return view('jewelry.index', compact('jewelries'));
         //return view('jewelry.index');
     }
 
@@ -51,7 +51,7 @@ class JewelryController extends Controller
     {
          //these are right
         $a_jewelry = Jewelry::findOrFail($id);
-        return view('jewelry.show', $a_jewelry);
+        return view('jewelry.show', compact('a_jewelry'));
         //return view('jewelry.show');
     }
 
