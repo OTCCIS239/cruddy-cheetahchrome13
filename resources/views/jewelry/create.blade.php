@@ -44,7 +44,7 @@
                                 
                                 <div class="form-group">
                                     <label for="jewelryImageInput">Jewelry Image URL</label>
-                                    <input type="url" class="form-control" id="jewelryImageInput" pattern="" aria-describedby="jewelryImageUrl" placeholder="Enter image URL -- images/image.jpg -- This field not required">
+                                    <input type="url" class="form-control" id="jewelryImageInput" pattern="" aria-describedby="jewelryImageUrl" placeholder="Enter image URL -- images/image.jpg&emsp;&emsp;This field not required">
                                 </div>
 
                                 <div class="text-center">

@@ -50,7 +50,7 @@
                                 
                                 <div class="form-group">
                                     <label for="metalImageInput">Metal Image URL</label>
-                                    <input type="url" class="form-control" id="metalImageInput" pattern="" aria-describedby="metalImageUrl" placeholder="Enter image URL -- images/image.jpg -- This field not required">
+                                    <input type="url" class="form-control" id="metalImageInput" pattern="" aria-describedby="metalImageUrl" placeholder="Enter image URL -- images/image.jpg&emsp;&emsp;This field not required">
                                 </div>
                                 
                                 <div class="text-center">

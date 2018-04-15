@@ -45,7 +45,7 @@
                                 
                                 <div class="form-group">
                                     <label for="toolsImageInput">Tools Image URL</label>
-                                    <input type="url" class="form-control" id="toolsImageInput" pattern="" aria-describedby="toolsImageUrl" placeholder="Enter image URL -- images/image.jpg -- This field not required">
+                                    <input type="url" class="form-control" id="toolsImageInput" pattern="" aria-describedby="toolsImageUrl" placeholder="Enter image URL -- images/image.jpg&emsp;&emsp;This field not required">
                                 </div>
 
                                 <div class="text-center">
