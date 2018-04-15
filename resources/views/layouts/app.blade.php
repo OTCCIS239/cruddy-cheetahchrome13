@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-
+        <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     <!-- My styles -->
     <!--<link rel="stylesheet" type="text/css" href='@php (Route::is('home')) ? "./assets/cruddy.css" : "../assets/cruddy.css";  @endphp'/>-->
     <!-- <link rel="stylesheet" type="text/css" href="cruddy.css"/> -->
@@ -20,7 +20,7 @@
         }
         body {
             /* LOLZ ugly AF but works for now */
-            background-image: url( {{ asset('images/bg.jpg')}} );
+            background-image: url( {{ asset('images/bg1.jpg')}} );
             /*font-family: 'Raleway', sans-serif;*/
         }
         hr {
@@ -33,7 +33,10 @@
         /* Removes number spinner from numeric type input fields in firefox*/
         input[type=number] {
             -moz-appearance: textfield;
-        }        
+        } 
+        .gap {
+            margin-bottom: 38px;
+        }       
     </style>
     
 </head>

@@ -55,12 +55,12 @@
                                             
                                             <div class="form-group">
                                                 <label for="gemImageInput">Gem Image URL</label>
-                                                <input type="url" class="form-control" id="gemImageInput" pattern="" aria-describedby="gemImageUrl" placeholder="Enter image URL -- images/image.jpg -- This field not required">
+                                                <input type="url" class="form-control" id="gemImageInput" pattern="" aria-describedby="gemImageUrl" placeholder="Enter image URL -- images/image.jpg&emsp;&emsp;This field not required">
                                             </div>
                                             
                                             <div class="text-center">
-                                                <button type="submit" class="btn btn-warning">Submit</button>
-                                                <a href="javascript:history.back()" class="btn btn-danger"><i class="fas fa-chevron-left"></i>Cancel</a>
+                                                <button type="submit" class="btn btn-warning"><i class="fab fa-telegram-plane"></i> Submit</button>
+                                                <a href="javascript:history.back()" class="btn btn-danger">Cancel <i class="far fa-times-circle"></i></a>
                                             </div>
 
                                         </form>  

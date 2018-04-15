@@ -49,8 +49,8 @@
                                 </div>
 
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-warning">Submit</button>
-                                    <a href="javascript:history.back()" class="btn btn-danger"><i class="fas fa-chevron-left"></i>Cancel</a>
+                                    <button type="submit" class="btn btn-warning"><i class="fab fa-telegram-plane"></i> Submit</button>
+                                    <a href="javascript:history.back()" class="btn btn-danger">Cancel <i class="far fa-times-circle"></i></a>
                                 </div>
                                 
                             </form>  

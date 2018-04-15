@@ -12,7 +12,7 @@
                                 <div>
 
                                     <div class="text-center">
-                                        <a href="metals/create" class="btn btn-warning">Create New</a>
+                                        <a href="metals/create" class="btn btn-warning gap">Create New <i class="far fa-file-alt"></i></a>
                                     </div>    
 
                                     <table class="table table-striped table-dark">
