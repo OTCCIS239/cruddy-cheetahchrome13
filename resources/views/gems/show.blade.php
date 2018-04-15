@@ -2,8 +2,6 @@
 
 @section('content')
     
-    
-
     <div class="row align-items-center" style="height: 100%;">
                     <div class="col-sm"></div>
                     <div class="col-sm-9">
@@ -23,7 +21,12 @@
 
                                         <tr>
                                         <!-- need help with syntax here to display image -->
-                                            <th scope="col"><img src=".{{ $a_gem->img }}" alt="gem picture"></th>
+                                            <th scope="col">image</th>
+                                        </tr>
+
+                                        <tr>
+                                        <!-- need help with syntax here to display image -->
+                                            <td><img src="{{ $a_gem->img }}" alt="gem picture"></td>
                                         </tr>
 
                                         <tr>
@@ -68,4 +71,5 @@
                     </div>
                     <div class="col-sm"></div>
             </div>
+
 @stop

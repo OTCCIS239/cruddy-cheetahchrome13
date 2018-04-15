@@ -11,14 +11,28 @@
         crossorigin="anonymous">
 
     <!-- My styles -->
-    <link rel="stylesheet" type="text/css" href='@php (Route::is('home')) ? "./assets/cruddy.css" : "../assets/cruddy.css";  @endphp'/>
+    <!--<link rel="stylesheet" type="text/css" href='@php (Route::is('home')) ? "./assets/cruddy.css" : "../assets/cruddy.css";  @endphp'/>-->
 
     <title>On the Bench</title>
     <style type="text/css">
         li.active a {
-            color: red !important;
+            color: orange !important;
         }
+        body {
+            background-image: url("3.jpg");
+        }
+        hr {
+            width: 100%;
+            height: 10px;
+        }
+        .navbar {
+            margin-bottom: 30px;
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+        }        
     </style>
+    
 </head>
 
 <body>
@@ -26,7 +40,14 @@
     <div class="container">
         @yield('content')
     </div>
-
+    <!-- Optional JavaScript -->
+    <script>
+        document.addEventListener("mousewheel", function(event){
+            if(document.activeElement.type === "number"){
+                document.activeElement.blur();
+            }
+        });
+    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
