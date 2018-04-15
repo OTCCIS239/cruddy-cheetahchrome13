@@ -30,7 +30,7 @@
 
                                 <div class="form-group">
                                     <label for="toolsDescriptionInput">Tools Description</label>
-                                    <input type="text" class="form-control" id="toolsDescriptionInput" required="required" aria-describedby="toolsDescription" placeholder="Describe the tool">
+                                    <textarea class="form-control" id="toolsDescriptionInput" rows="3" required="required" aria-describedby="toolsDescription" placeholder="Describe the tool"></textarea>
                                 </div>
 
                                 <div class="form-group">
@@ -45,7 +45,7 @@
                                 
                                 <div class="form-group">
                                     <label for="toolsImageInput">Tools Image URL</label>
-                                    <input type="url" class="form-control" id="toolsImageInput" pattern="" aria-describedby="toolsImageUrl" placeholder="Enter image URL -- images/image.jpg -- not required">
+                                    <input type="url" class="form-control" id="toolsImageInput" pattern="" aria-describedby="toolsImageUrl" placeholder="Enter image URL -- images/image.jpg -- This field not required">
                                 </div>
 
                                 <div class="text-center">

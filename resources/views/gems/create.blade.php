@@ -39,7 +39,8 @@
 
                                             <div class="form-group">
                                                 <label for="gemDescriptionInput">Gem Description</label>
-                                                <input type="text" class="form-control" id="gemDescriptionInput" required="required" aria-describedby="gemDescription" placeholder="Describe the gem">
+                                                <textarea class="form-control" id="gemDescriptionInput" rows="3" required="required" aria-describedby="gemDescription" placeholder="Describe the gem"></textarea>
+                                                
                                             </div>
 
                                             <div class="form-group">
@@ -54,7 +55,7 @@
                                             
                                             <div class="form-group">
                                                 <label for="gemImageInput">Gem Image URL</label>
-                                                <input type="url" class="form-control" id="gemImageInput" pattern="" aria-describedby="gemImageUrl" placeholder="Enter image URL -- images/image.jpg -- not required">
+                                                <input type="url" class="form-control" id="gemImageInput" pattern="" aria-describedby="gemImageUrl" placeholder="Enter image URL -- images/image.jpg -- This field not required">
                                             </div>
                                             
                                             <div class="text-center">

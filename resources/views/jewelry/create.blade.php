@@ -14,7 +14,6 @@
 
                         <table class="table table-striped table-dark">
 
-
                             <form>
 
                                 <div class="form-group">
@@ -30,7 +29,7 @@
 
                                 <div class="form-group">
                                     <label for="jewelryDescriptionInput">Jewelry Description</label>
-                                    <input type="text" class="form-control" id="jewelryDescriptionInput" required="required" aria-describedby="jewelryDescription" placeholder="Describe the jewelry">
+                                    <textarea class="form-control" id="jewelryDescriptionInput" rows="3 required="required" aria-describedby="jewelryDescription" placeholder="Describe the jewelry""></textarea>
                                 </div>
 
                                 <div class="form-group">
@@ -45,7 +44,7 @@
                                 
                                 <div class="form-group">
                                     <label for="jewelryImageInput">Jewelry Image URL</label>
-                                    <input type="url" class="form-control" id="jewelryImageInput" pattern="" aria-describedby="jewelryImageUrl" placeholder="Enter image URL -- images/image.jpg -- not required">
+                                    <input type="url" class="form-control" id="jewelryImageInput" pattern="" aria-describedby="jewelryImageUrl" placeholder="Enter image URL -- images/image.jpg -- This field not required">
                                 </div>
 
                                 <div class="text-center">

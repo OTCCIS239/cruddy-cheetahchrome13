@@ -20,7 +20,7 @@
                                 <div class="form-group">
                                     <label for="suppliesNameInput">Supplies Name</label>
                                     <input type="text" class="form-control" id="suppliesNameInput" required="required" aria-describedby="suppliesName" placeholder="Describe supplies name">
-                                    <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                                    <!--<small id="" class="form-text text-muted"></small>-->
                                 </div>
 
                                 <div class="form-group">
@@ -30,7 +30,7 @@
 
                                 <div class="form-group">
                                     <label for="suppliesDescriptionInput">Supplies Description</label>
-                                    <input type="text" class="form-control" id="suppliesDescriptionInput" required="required" aria-describedby="suppliesDescription" placeholder="Describe the supplies">
+                                    <textarea class="form-control" id="suppliesDescriptionInput" rows="3" required="required" aria-describedby="suppliesDescription" placeholder="Describe the supplies"></textarea>
                                 </div>
 
                                 <div class="form-group">
@@ -45,7 +45,7 @@
                                 
                                 <div class="form-group">
                                     <label for="suppliesImageInput">Supplies Image URL</label>
-                                    <input type="url" class="form-control" id="suppliesImageInput" pattern="" aria-describedby="suppliesImageUrl" placeholder="Enter image URL -- images/image.jpg -- not required">
+                                    <input type="url" class="form-control" id="suppliesImageInput" pattern="" aria-describedby="suppliesImageUrl" placeholder="Enter image URL -- images/image.jpg -- This field not required">
                                 </div>
                                 
                                 <div class="text-center">

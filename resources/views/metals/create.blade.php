@@ -35,7 +35,7 @@
 
                                 <div class="form-group">
                                     <label for="metalDescriptionInput">Metal Description</label>
-                                    <input type="text" class="form-control" id="metalDescriptionInput" required="required" aria-describedby="metalDescription" placeholder="Describe the metal">
+                                    <textarea class="form-control" id="metalDescriptionInput" rows="3" required="required" aria-describedby="metalDescription" placeholder="Describe the metal"></textarea>
                                 </div>
 
                                 <div class="form-group">
@@ -50,7 +50,7 @@
                                 
                                 <div class="form-group">
                                     <label for="metalImageInput">Metal Image URL</label>
-                                    <input type="url" class="form-control" id="metalImageInput" pattern="" aria-describedby="metalImageUrl" placeholder="Enter image URL -- images/image.jpg -- not required">
+                                    <input type="url" class="form-control" id="metalImageInput" pattern="" aria-describedby="metalImageUrl" placeholder="Enter image URL -- images/image.jpg -- This field not required">
                                 </div>
                                 
                                 <div class="text-center">
