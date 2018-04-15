@@ -12,14 +12,16 @@
 
     <!-- My styles -->
     <!--<link rel="stylesheet" type="text/css" href='@php (Route::is('home')) ? "./assets/cruddy.css" : "../assets/cruddy.css";  @endphp'/>-->
-
+    <!-- <link rel="stylesheet" type="text/css" href="cruddy.css"/> -->
     <title>On the Bench</title>
     <style type="text/css">
         li.active a {
             color: orange !important;
         }
         body {
-            background-image: url("bg.jpg");
+            /* LOLZ ugly AF but works for now */
+            background-image: url( {{ asset('images/bg.jpg')}} );
+            /*font-family: 'Raleway', sans-serif;*/
         }
         hr {
             width: 100%;
@@ -28,6 +30,7 @@
         .navbar {
             margin-bottom: 30px;
         }
+        /* Removes number spinner from numeric type input fields in firefox*/
         input[type=number] {
             -moz-appearance: textfield;
         }        

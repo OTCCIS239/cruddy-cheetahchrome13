@@ -20,13 +20,11 @@
                                     <table class="table table-striped table-dark">
 
                                         <tr>
-                                        <!-- need help with syntax here to display image -->
                                             <th scope="col">image</th>
                                         </tr>
 
                                         <tr>
-                                        <!-- need help with syntax here to display image -->
-                                            <td><img src="{{ $a_jewelry->img }}" alt="jewelry picture"></th>
+                                            <td class="text-center"><img src="{{ asset($a_jewelry->img) }}" alt="jewelry picture"></th>
                                         </tr>
                                        
                                         <tr>

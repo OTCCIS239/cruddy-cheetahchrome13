@@ -26,7 +26,7 @@
 
                                         <tr>
                                         <!-- need help with syntax here to display image -->
-                                            <td><img src="{{ $a_gem->img }}" alt="gem picture"></td>
+                                            <td class="text-center"><img src="{{ asset($a_gem->img) }}" alt="gem picture"></td>
                                         </tr>
 
                                         <tr>
