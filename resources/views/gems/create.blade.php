@@ -5,7 +5,7 @@
                     <div class="col-sm"></div>
                     <div class="col-sm-9">
                         <div class="card text-white bg-dark mb-3">
-                            <div class="card-header text-center font-weight-bold text-white bg-warning mb-3">
+                            <div class="card-header text-center font-weight-bold text-white bg-secondary mb-3">
                                 <h2>Create New Gem Stock</h2>
                             </div>
                             <div class="card-body">
@@ -19,7 +19,7 @@
                                             <div class="form-group">
                                                 <label for="gemNameInput">Gem Name</label>
                                                 <input type="text" class="form-control" id="gemNameInput" required="required" aria-describedby="gemName" placeholder="Describe gem name">
-                                                <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                                                <!--<small id="" class="form-text text-muted"></small>-->
                                             </div>
 
                                             <div class="form-group">
@@ -58,7 +58,8 @@
                                             </div>
                                             
                                             <div class="text-center">
-                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                                <button type="submit" class="btn btn-warning">Submit</button>
+                                                <a href="javascript:history.back()" class="btn btn-danger"><i class="fas fa-chevron-left"></i>Cancel</a>
                                             </div>
 
                                         </form>  

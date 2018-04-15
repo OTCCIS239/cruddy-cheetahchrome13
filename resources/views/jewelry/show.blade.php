@@ -6,7 +6,7 @@
                     <div class="col-sm"></div>
                     <div class="col-sm-9">
                         <div class="card text-white bg-dark mb-3">
-                            <div class="card-header text-center font-weight-bold text-white bg-warning mb-3">
+                            <div class="card-header text-center font-weight-bold text-white bg-secondary mb-3">
                                 <h2>Jewelry Details</h2>
                             </div>
                             <div class="card-body">
@@ -14,15 +14,21 @@
                                     <h5 class="text-center">{{ $a_jewelry->name }}</h5>
 
                                     <div class="text-center">
-                                        <a href="jewelry/edit" class="btn btn-primary">Edit</a>
+                                        <a href="jewelry/edit" class="btn btn-warning">Edit</a>
                                     </div>     
 
                                     <table class="table table-striped table-dark">
 
                                         <tr>
-                                            <th scope="col"><img src="../{{ $a_jewelry->img }}" alt="jewelry picture"></th>
+                                        <!-- need help with syntax here to display image -->
+                                            <th scope="col">image</th>
                                         </tr>
 
+                                        <tr>
+                                        <!-- need help with syntax here to display image -->
+                                            <td><img src="{{ $a_jewelry->img }}" alt="jewelry picture"></th>
+                                        </tr>
+                                       
                                         <tr>
                                             <th scope="col">Jewelry type</th>
                                         </tr>
@@ -58,7 +64,7 @@
                                     </table>                                
                                 </div>
                                 <div class="text-center">
-                                    <a href="javascript:history.back()" class="btn btn-primary"><i class="fas fa-chevron-left"></i> Previous Page</a>
+                                    <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous Page</a>
                                 </div>      
                             </div>
                         </div>

@@ -6,14 +6,14 @@
                     <div class="col-sm"></div>
                     <div class="col-sm-9">
                         <div class="card text-white bg-dark mb-3">
-                            <div class="card-header text-center font-weight-bold text-white bg-warning mb-3">
+                            <div class="card-header text-center font-weight-bold text-white bg-secondary mb-3">
                                 <h2>Gems</h2>
                             </div>
                             <div class="card-body">
                                 <div>
 
                                     <div class="text-center">
-                                        <a href="gems/create" class="btn btn-primary">Create New</a>
+                                        <a href="gems/create" class="btn btn-warning">Create New</a>
                                     </div>    
 
                                     <table class="table table-striped table-dark">
@@ -28,7 +28,7 @@
                                         </tr>
                                    
                                         <tr>
-                                            <td><a class="btn btn-primary" href="gems/{{ $gem->id }}">Details <i class="fas fa-chevron-right"></i></a></td>
+                                            <td><a class="btn btn-info" href="gems/{{ $gem->id }}">Details <i class="fas fa-chevron-right"></i></a></td>
                                             <td>{{ $gem->name }}</td>
                                             <td>{{ $gem->type }}</td>
                                             <td class="text-right">{{ $gem->price }}</td>

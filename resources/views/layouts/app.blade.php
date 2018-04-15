@@ -19,7 +19,7 @@
             color: orange !important;
         }
         body {
-            background-image: url("3.jpg");
+            background-image: url("bg.jpg");
         }
         hr {
             width: 100%;
@@ -40,7 +40,8 @@
     <div class="container">
         @yield('content')
     </div>
-    <!-- Optional JavaScript -->
+    <!-- JavaScript - this doesn't work to stop mousewheel 
+        increment/decrement action on numeric type input fields -->
     <script>
         document.addEventListener("mousewheel", function(event){
             if(document.activeElement.type === "number"){

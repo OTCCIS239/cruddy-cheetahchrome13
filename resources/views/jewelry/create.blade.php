@@ -5,7 +5,7 @@
         <div class="col-sm"></div>
         <div class="col-sm-9">
             <div class="card text-white bg-dark mb-3">
-                <div class="card-header text-center font-weight-bold text-white bg-warning mb-3">
+                <div class="card-header text-center font-weight-bold text-white bg-secondary mb-3">
                     <h2>Create New Jewelry Stock</h2>
                 </div>
                 <div class="card-body">
@@ -49,7 +49,8 @@
                                 </div>
 
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-warning">Submit</button>
+                                    <a href="javascript:history.back()" class="btn btn-danger"><i class="fas fa-chevron-left"></i>Cancel</a>
                                 </div>
                                                               
                             </form>  
