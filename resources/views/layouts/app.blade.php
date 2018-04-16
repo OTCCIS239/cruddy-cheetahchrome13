@@ -20,7 +20,8 @@
         }
         body {
             /* LOLZ ugly AF but works for now */
-            background-image: url( {{ asset('images/bg1.jpg')}} );
+            /* background-image: url( {{ asset('images/bg1.jpg')}} ); */
+            background-image: url(/images/bg1.jpg);
             /*font-family: 'Raleway', sans-serif;*/
         }
         hr {
