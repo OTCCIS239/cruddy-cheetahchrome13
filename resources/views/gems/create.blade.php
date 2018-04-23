@@ -55,8 +55,20 @@
                                             
                                             <div class="form-group">
                                                 <label for="gemImageInput">Gem Image URL</label>
-                                                <input type="url" class="form-control" id="gemImageInput" pattern="" aria-describedby="gemImageUrl" placeholder="Enter image URL -- images/image.jpg&emsp;&emsp;This field not required">
+                                                <select class="form-control" id="gemImageInput">
+                                                <option>/images/default.jpg</option>
+                                                <option>/images/gemIcon.jpg</option>
+                                                <option>/images/jewelryIcon.jpg</option>
+                                                <option>/images/metalIcon.jpg</option>
+                                                <option>/images/toolIcon.jpg</option>
+                                                <option>/images/supplyIcon.jpg</option>
+                                                </select>
                                             </div>
+                                            
+                                            <!-- <div class="form-group">
+                                                <label for="gemImageInput">Gem Image URL</label>
+                                                <input type="url" class="form-control" id="gemImageInput" pattern="" aria-describedby="gemImageUrl" placeholder="Enter image URL -- /images/image.jpg&emsp;&emsp;This field not required">
+                                            </div> -->
                                             
                                             <div class="text-center">
                                                 <button type="submit" class="btn btn-warning"><i class="fab fa-telegram-plane"></i> Submit</button>

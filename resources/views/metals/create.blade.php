@@ -50,8 +50,20 @@
                                 
                                 <div class="form-group">
                                     <label for="metalImageInput">Metal Image URL</label>
-                                    <input type="url" class="form-control" id="metalImageInput" pattern="" aria-describedby="metalImageUrl" placeholder="Enter image URL -- images/image.jpg&emsp;&emsp;This field not required">
+                                    <select class="form-control" id="metalImageInput">
+                                    <option>/images/default.jpg</option>
+                                    <option>/images/gemIcon.jpg</option>
+                                    <option>/images/jewelryIcon.jpg</option>
+                                    <option>/images/metalIcon.jpg</option>
+                                    <option>/images/toolIcon.jpg</option>
+                                    <option>/images/supplyIcon.jpg</option>
+                                    </select>
                                 </div>
+
+                                <!-- <div class="form-group">
+                                    <label for="metalImageInput">Metal Image URL</label>
+                                    <input type="url" class="form-control" id="metalImageInput" pattern="" aria-describedby="metalImageUrl" placeholder="Enter image URL -- images/image.jpg&emsp;&emsp;This field not required">
+                                </div> -->
                                 
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-warning"><i class="fab fa-telegram-plane"></i> Submit</button>
