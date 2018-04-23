@@ -35,7 +35,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td class="text-center"><img src="/{{ $a_jewelry->img }}" alt="jewelry picture"></th>
+                                            <td class="text-center"><img src="{{ $a_jewelry->img }}" alt="jewelry picture"></th>
                                         </tr>
                                        
                                         <tr>
@@ -44,6 +44,14 @@
 
                                         <tr>
                                             <td>{{ $a_jewelry->type }}</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="col">Jewelry size</th>
+                                        </tr>
+
+                                        <tr>
+                                            <td>{{ $a_jewelry->size }}</td>
                                         </tr>
 
                                         <tr>
@@ -59,7 +67,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_jewelry->price }}</td>
+                                            <td>${{ $a_jewelry->price }}</td>
                                         </tr>
 
                                         <tr>

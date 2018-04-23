@@ -35,7 +35,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td class="text-center"><img src="/{{ $a_metal->img }}" alt="metal picture"></th>
+                                            <td class="text-center"><img src="{{ $a_metal->img }}" alt="metal picture"></th>
                                         </tr>
 
                                         <tr>
@@ -67,7 +67,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_metal->price }}</td>
+                                            <td>${{ $a_metal->price }}</td>
                                         </tr>
 
                                         <tr>

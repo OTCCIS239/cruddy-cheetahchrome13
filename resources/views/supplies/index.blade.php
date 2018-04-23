@@ -30,7 +30,7 @@
                                             <td><a class="btn btn-info" href="supplies/{{ $supply->id }}">Details <i class="fas fa-chevron-right"></i></a></td>
                                             <td>{{ $supply->name }}</td>
                                             <td>{{ $supply->type }}</td>
-                                            <td class="text-right">{{ $supply->price }}</td>
+                                            <td class="text-right">${{ $supply->price }}</td>
                                         </tr>
                                        
                                     <!--</table>-->       

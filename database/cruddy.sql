@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 15, 2018 at 06:37 AM
+-- Generation Time: Apr 23, 2018 at 05:01 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.1
 
@@ -37,7 +37,7 @@ CREATE TABLE `gems` (
   `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `price` decimal(8,2) UNSIGNED NOT NULL,
   `stock` int(10) UNSIGNED NOT NULL,
-  `img` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'images/default.jpg',
+  `img` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '/images/default.jpg',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -47,9 +47,9 @@ CREATE TABLE `gems` (
 --
 
 INSERT INTO `gems` (`id`, `name`, `type`, `cut`, `size`, `description`, `price`, `stock`, `img`, `created_at`, `updated_at`) VALUES
-(1, 'Burmese Ruby', 'Ruby', 'Cabochon', 'Avg. 24mm x 30mm 35ct.', 'Avg. 35ct. Burmese ruby', '20.99', 10, 'images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00'),
-(2, 'Guatemalan Jade', 'Jadeite', 'Cabochon', '35mm x 40mm 50ct.', 'Guatemalan blue Mayan/Olmec jadeite', '50.00', 9, 'images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00'),
-(3, 'African Malachite', 'Malachite', 'Cabochon', 'Avg. 30mm x 45mm 15ct.', 'African (Congo) malachite avg. 15ct.', '17.99', 7, 'images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00');
+(1, 'Burmese Ruby', 'Ruby', 'Cabochon', 'Avg. 24mm x 30mm 35ct.', 'Avg. 35ct. Burmese ruby', '20.99', 10, '/images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00'),
+(2, 'Guatemalan Jade', 'Jadeite', 'Cabochon', '35mm x 40mm 50ct.', 'Guatemalan blue Mayan/Olmec jadeite', '50.00', 9, '/images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00'),
+(3, 'African Malachite', 'Malachite', 'Cabochon', 'Avg. 30mm x 45mm 15ct.', 'African (Congo) malachite avg. 15ct.', '17.99', 7, '/images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00');
 
 -- --------------------------------------------------------
 
@@ -61,6 +61,7 @@ CREATE TABLE `jewelries` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `size` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `price` decimal(8,2) UNSIGNED NOT NULL,
   `stock` int(10) UNSIGNED NOT NULL,
@@ -73,10 +74,10 @@ CREATE TABLE `jewelries` (
 -- Dumping data for table `jewelries`
 --
 
-INSERT INTO `jewelries` (`id`, `name`, `type`, `description`, `price`, `stock`, `img`, `created_at`, `updated_at`) VALUES
-(1, 'Mexican rainbow obsidian pendant', 'Pendant', 'Mexican rainbow obsidian pendant made with Argentium silver - no chain', '150.00', 1, 'images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00'),
-(2, 'Men\'s heavy silver ring size 10', 'Ring', 'Men\'s size 10 solid heavy silver ring, made with 2 troy oz. of Argentium silver', '250.00', 1, 'images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00'),
-(3, 'Women\'s turquoise silver ring size 6.5', 'Ring', 'Women\'s size 6.5 turquoise silver ring, sterling silver with a 10ct. Royston turquoise cabochon and 18kt. gold bezel ', '239.99', 1, 'images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00');
+INSERT INTO `jewelries` (`id`, `name`, `type`, `size`, `description`, `price`, `stock`, `img`, `created_at`, `updated_at`) VALUES
+(1, 'Mexican rainbow obsidian pendant', 'Pendant', 'Medium', 'Mexican rainbow obsidian pendant made with Argentium silver - no chain', '150.00', 1, '/images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00'),
+(2, 'Men\'s heavy silver ring size 10', 'Ring', '10', 'Men\'s size 10 solid heavy silver ring, made with 2 troy oz. of Argentium silver', '250.00', 1, '/images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00'),
+(3, 'Women\'s turquoise silver ring size 6.5', 'Ring', '6.5', 'Women\'s size 6.5 turquoise silver ring, sterling silver with a 10ct. Royston turquoise cabochon and 18kt. gold bezel ', '239.99', 1, '/images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00');
 
 -- --------------------------------------------------------
 
@@ -102,9 +103,9 @@ CREATE TABLE `metals` (
 --
 
 INSERT INTO `metals` (`id`, `name`, `type`, `form`, `description`, `price`, `stock`, `img`, `created_at`, `updated_at`) VALUES
-(1, 'Argentium silver', 'Silver', 'Casting grain', 'Argentium silver casting grain for vacuum casting - priced per troy oz.', '17.85', 100, 'images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00'),
-(2, '24k gold ', 'Gold', 'Casting grain', '24k gold casting grain for alloying and vacuum casting', '1400.00', 10, 'images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00'),
-(3, '18k gold', 'Gold', 'Casting grain', '18k gold alloy casting grain for vacuum casting ', '1350.00', 10, 'images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00');
+(1, 'Argentium silver', 'Silver', 'Casting grain', 'Argentium silver casting grain for vacuum casting - priced per troy oz.', '17.85', 100, '/images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00'),
+(2, '24k gold ', 'Gold', 'Casting grain', '24k gold casting grain for alloying and vacuum casting', '1400.00', 10, '/images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00'),
+(3, '18k gold', 'Gold', 'Casting grain', '18k gold alloy casting grain for vacuum casting ', '1350.00', 10, '/images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00');
 
 -- --------------------------------------------------------
 
@@ -129,7 +130,13 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (4, '2018_04_13_184516_create_jewelries_table', 1),
 (5, '2018_04_13_190547_create_metals_table', 1),
 (6, '2018_04_13_190800_create_tools_table', 1),
-(7, '2018_04_13_190853_create_supplies_table', 1);
+(7, '2018_04_13_190853_create_supplies_table', 1),
+(8, '2018_04_23_020556_add_size_column', 2),
+(9, '2018_04_23_022909_update_img', 2),
+(10, '2018_04_23_023022_update_img', 2),
+(11, '2018_04_23_023128_update_img', 2),
+(12, '2018_04_23_023208_update_img', 2),
+(13, '2018_04_23_023343_update_img', 2);
 
 -- --------------------------------------------------------
 
@@ -166,9 +173,9 @@ CREATE TABLE `supplies` (
 --
 
 INSERT INTO `supplies` (`id`, `name`, `type`, `description`, `price`, `stock`, `img`, `created_at`, `updated_at`) VALUES
-(1, 'Herkules white label saw blades', 'Saw blades', 'Herkules white label saw blades - most popular sizes assortment pack - 50 count', '64.99', 10, 'images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00'),
-(2, 'Dense charcoal soldering block', 'Soldering block', 'Dense European type charcoal soldering block', '12.99', 12, 'images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00'),
-(3, 'Battern\'s self-pickling flux', 'Flux', 'Battern\'s self-pickling flux - 8 fluid oz.', '15.00', 10, 'images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00');
+(1, 'Herkules white label saw blades', 'Saw blades', 'Herkules white label saw blades - most popular sizes assortment pack - 50 count', '64.99', 10, '/images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00'),
+(2, 'Dense charcoal soldering block', 'Soldering block', 'Dense European type charcoal soldering block', '12.99', 12, '/images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00'),
+(3, 'Battern\'s self-pickling flux', 'Flux', 'Battern\'s self-pickling flux - 8 fluid oz.', '15.00', 10, '/images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00');
 
 -- --------------------------------------------------------
 
@@ -193,9 +200,9 @@ CREATE TABLE `tools` (
 --
 
 INSERT INTO `tools` (`id`, `name`, `type`, `description`, `price`, `stock`, `img`, `created_at`, `updated_at`) VALUES
-(1, 'Pedinghaus goldsmith\'s hammer', 'Hammer', 'Pedinghaus goldsmith\'s hammer 10 oz. size - German made', '89.99', 3, 'images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00'),
-(2, 'Lindstrom flat-nose pliers', 'Pliers', 'Lindstrom flat-nose pliers - med size', '45.00', 7, 'images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00'),
-(3, 'Original Knew Concepts jewellers 3\" saw frame', 'Saw', 'Original Knew Concepts jewellers 3\" saw frame - comes with blade assortment pack', '54.00', 5, 'images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00');
+(1, 'Pedinghaus goldsmith\'s hammer', 'Hammer', 'Pedinghaus goldsmith\'s hammer 10 oz. size - German made', '89.99', 3, '/images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00'),
+(2, 'Lindstrom flat-nose pliers', 'Pliers', 'Lindstrom flat-nose pliers - med size', '45.00', 7, '/images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00'),
+(3, 'Original Knew Concepts jewellers 3\" saw frame', 'Saw', 'Original Knew Concepts jewellers 3\" saw frame - comes with blade assortment pack', '54.00', 5, '/images/default.jpg', '2018-04-14 05:00:00', '2018-04-14 05:00:00');
 
 -- --------------------------------------------------------
 
@@ -292,7 +299,7 @@ ALTER TABLE `metals`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `supplies`

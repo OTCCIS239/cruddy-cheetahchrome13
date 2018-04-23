@@ -35,7 +35,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td class="text-center"><img src="/{{ $a_tool->img }}" alt="tool picture"></th>
+                                            <td class="text-center"><img src="{{ $a_tool->img }}" alt="tool picture"></th>
                                         </tr>
 
                                         <tr>
@@ -59,7 +59,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_tool->price }}</td>
+                                            <td>${{ $a_tool->price }}</td>
                                         </tr>
 
                                         <tr>

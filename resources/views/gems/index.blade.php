@@ -31,7 +31,7 @@
                                             <td><a class="btn btn-info" href="gems/{{ $gem->id }}">Details <i class="fas fa-chevron-right"></i></a></td>
                                             <td>{{ $gem->name }}</td>
                                             <td>{{ $gem->type }}</td>
-                                            <td class="text-right">{{ $gem->price }}</td>
+                                            <td class="text-right">${{ $gem->price }}</td>
                                         </tr>
                                        
                                     <!--</table>-->       

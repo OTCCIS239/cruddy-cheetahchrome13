@@ -35,7 +35,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td class="text-center"><img src="/{{ $a_gem->img }}" alt="gem picture"></td>
+                                            <td class="text-center"><img src="{{ $a_gem->img }}" alt="gem picture"></td>
                                         </tr>
 
                                         <tr>
@@ -76,7 +76,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_gem->price }}</td>
+                                            <td>${{ $a_gem->price }}</td>
                                         </tr>
 
                                         <tr>

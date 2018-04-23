@@ -30,7 +30,7 @@
                                             <td><a class="btn btn-info" href="jewelry/{{ $jewelry->id }}">Details <i class="fas fa-chevron-right"></i></a></td>
                                             <td>{{ $jewelry->name }}</td>
                                             <td>{{ $jewelry->type }}</td>
-                                            <td class="text-right">{{ $jewelry->price }}</td>
+                                            <td class="text-right">${{ $jewelry->price }}</td>
                                         </tr>
                                        
                                     <!--</table>-->       
