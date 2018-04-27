@@ -33,11 +33,11 @@
                                 <div class="form-group">
                                     <label for="metalImageInput">Metal Image URL</label>
                                     <select class="form-control" id="metalImageInput" value="{{ @$metal ? $metal->img : '' }}" >
-                                    <option>/images/default.jpg</option>
-                                    <option>/images/gemIcon.jpg</option>
-                                    <option>/images/jewelryIcon.jpg</option>
-                                    <option>/images/metalIcon.jpg</option>
-                                    <option>/images/toolIcon.jpg</option>
-                                    <option>/images/supplyIcon.jpg</option>
+                                        <option>/images/default.jpg</option>
+                                        <option>/images/gemIcon.jpg</option>
+                                        <option>/images/jewelryIcon.jpg</option>
+                                        <option>/images/metalIcon.jpg</option>
+                                        <option>/images/toolIcon.jpg</option>
+                                        <option>/images/supplyIcon.jpg</option>
                                     </select>
                                 </div>

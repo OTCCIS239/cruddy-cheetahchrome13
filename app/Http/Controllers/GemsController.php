@@ -58,7 +58,7 @@ class GemsController extends Controller
         // $gem->price = $request->price;
         // $gem->stock = $request->stock;
         // $gem->img = $request->img;
-        // $success = $gem->save() ? $request->session()->flash('success', 'Saved') : $request->session()->flash('success', 'error while saving');
+        // $gem->save();
                                                                                         
     //    dd($gem);
        return redirect('/gems/' . $gem->id); // REDIRECTS TO /GEMS/CREATE, SINCE NO NEW ID WAS CREATED?
