@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Metal;
+use App\Http\Requests\CreateMetalRequest;
 
 class MetalsController extends Controller
 {
@@ -36,15 +37,8 @@ class MetalsController extends Controller
      */
     public function store(Request $request)
     {
-        $this->Validate($request, [
-            'name'=> 'required|string',
-            'type'=> 'required|string',
-            'form'=> 'required|string',
-            'description'=> 'required|string',
-            'price'=> 'required|numeric',
-            'stock'=> 'required|numeric',
-            'img'=> 'required|string'
-       ]);
+    //     $this->Validate($request, [
+    //    ]);
 
        $metal = Metal::create($request->all());
        return redirect('/metals/' . $metal->id);

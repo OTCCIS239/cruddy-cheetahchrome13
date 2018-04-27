@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('content')
-
+@section('content') 
+            <!-- <pre>{{ json_encode(\App\Gem::all(), JSON_PRETTY_PRINT) }}</pre> -->
             <div class="row align-items-center" style="height: 100%;">
                     <div class="col-sm"></div>
                     <div class="col-sm-9">
@@ -22,7 +22,6 @@
                                         <tr>
                                             <th scope="col"></th>
                                             <th scope="col">Gem name</th>
-                                            <!-- <th scope="col">Gem Type</th> -->
                                             <th scope="col">Price</th>
                                             <th scope="col" class="text-right"></th>
 
@@ -31,12 +30,10 @@
                                         <tr>
                                             <td><a class="btn btn-info" href="gems/{{ $gem->id }}">Details <i class="fas fa-chevron-right"></i></a></td>
                                             <td>{{ $gem->name }}</td>
-                                            <!-- <td>{{ $gem->type }}</td> -->
                                             <td>${{ $gem->price }}</td>
                                             <td class="text-right"><a href="gems/{{ $gem->id }}/edit" class="btn btn-warning">Edit <i class="far fa-edit"></i></a></td>
                                         </tr>
-                                       
-                                    <!--</table>-->       
+
                                     @endforeach
                                     </table>
 

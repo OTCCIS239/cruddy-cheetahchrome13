@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Jewelry;
+use App\Http\Requests\CreateJewelryRequest;
 
 class JewelryController extends Controller
 {
@@ -36,17 +37,11 @@ class JewelryController extends Controller
      */
     public function store(Request $request)
     {
-        $this->Validate($request, [
-            'name'=> 'required|string',
-            'type'=> 'required|string',
-            'size'=> 'required|string',
-            'description'=> 'required|string',
-            'price'=> 'required|numeric',
-            'stock'=> 'required|numeric',
-            'img'=> 'required|string'
-       ]);
+    //     $this->Validate($request, [
+    //    ]);
 
        $jewelry = Jewelry::create($request->all());
+    //    dd($jewelry);
        return redirect('/jewelry/' . $jewelry->id);
     }
 
@@ -83,6 +78,7 @@ class JewelryController extends Controller
     public function update(Request $request, Jewelry $jewelry)
     {
         $jewelry->update($request->all());
+        dd($jewelry);
         return redirect('/jewelry/' . $jewelry->id);
     }
 
@@ -94,6 +90,7 @@ class JewelryController extends Controller
      */
     public function destroy(Jewelry $jewelry)
     {
+        // dd($jewelry);
         $jewelry->delete();
         return redirect('/jewelry');
     }

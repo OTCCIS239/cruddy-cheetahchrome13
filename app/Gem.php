@@ -15,6 +15,6 @@ class Gem extends Model
         'description',
         'price',
         'stock',
-        'img'
+        'img',
     ];
 }

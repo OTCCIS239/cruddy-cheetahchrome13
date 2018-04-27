@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Supply;
+use App\Http\Requests\CreateSupplyRequest;
 
 class SuppliesController extends Controller
 {
@@ -36,14 +37,8 @@ class SuppliesController extends Controller
      */
     public function store(Supply $supply)
     {
-        $this->Validate($request, [
-            'name'=> 'required|string',
-            'type'=> 'required|string',
-            'description'=> 'required|string',
-            'price'=> 'required|numeric',
-            'stock'=> 'required|numeric',
-            'img'=> 'required|string'
-       ]);
+    //     $this->Validate($request, [
+    //    ]);
 
        $supply = Supply::create($request->all());
        return redirect('/supplies/' . $supply->id);

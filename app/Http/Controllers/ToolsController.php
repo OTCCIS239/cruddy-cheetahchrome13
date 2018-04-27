@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Tool;
+use App\Http\Requests\CreateToolRequest;
 
 class ToolsController extends Controller
 {
@@ -36,14 +37,8 @@ class ToolsController extends Controller
      */
     public function store(Request $request)
     {
-        $this->Validate($request, [
-            'name'=> 'required|string',
-            'type'=> 'required|string',
-            'description'=> 'required|string',
-            'price'=> 'required|numeric',
-            'stock'=> 'required|numeric',
-            'img'=> 'required|string'
-       ]);
+    //     $this->Validate($request, [
+    //    ]);
 
        $tool = Tool::create($request->all());
        return redirect('/tools/' . $tool->id);

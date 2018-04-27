@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    
+    <!-- {{ $gem->toJson() }} -->
     <div class="row align-items-center" style="height: 100%;">
                     <div class="col-sm"></div>
                     <div class="col-sm-9">
