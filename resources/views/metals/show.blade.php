@@ -11,7 +11,7 @@
                                 <h2>Metal Details</h2>
                                 
                                 <div class='text-center'>
-                                    <form action="metals/{{ $a_metal->id }}" method="post">
+                                    <form action="metals/{{ $metal->id }}" method="post">
                                         <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous Page</a>
                                         <input type="hidden" name="_method" value="delete">
                                         {{ csrf_field() }}
@@ -25,7 +25,7 @@
                             </div>
                             <div class="card-body">
                                 <div>
-                                    <h5 class="text-center">{{ $a_metal->name }}</h5>
+                                    <h5 class="text-center">{{ $metal->name }}</h5>
 
                                     <table class="table table-striped table-dark">
 
@@ -34,7 +34,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_metal->name }}</td>
+                                            <td>{{ $metal->name }}</td>
                                         </tr>
 
                                         <tr>
@@ -42,7 +42,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td class="text-center"><img src="{{ $a_metal->img }}" alt="metal picture"></th>
+                                            <td class="text-center"><img src="{{ $metal->img }}" alt="metal picture"></th>
                                         </tr>
 
                                         <tr>
@@ -50,7 +50,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_metal->type }}</td>
+                                            <td>{{ $metal->type }}</td>
                                         </tr>
 
                                         <tr>
@@ -58,7 +58,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_metal->form }}</td>
+                                            <td>{{ $metal->form }}</td>
                                         </tr>
 
                                         <tr>
@@ -66,7 +66,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_metal->description }}</td>
+                                            <td>{{ $metal->description }}</td>
                                         </tr>
 
                                         <tr>
@@ -74,7 +74,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>${{ $a_metal->price }}</td>
+                                            <td>${{ $metal->price }}</td>
                                         </tr>
 
                                         <tr>
@@ -82,13 +82,13 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_metal->stock }}</td>
+                                            <td>{{ $metal->stock }}</td>
                                         </tr>
                                         
                                     </table>                                
                                 </div>
                                 <div class="text-center">
-                                    <form action="metals/{{ $a_metal->id }}" method="post">
+                                    <form action="metals/{{ $metal->id }}" method="post">
                                         <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous Page</a>
                                         <input type="hidden" name="_method" value="delete">
                                         {{ csrf_field() }}

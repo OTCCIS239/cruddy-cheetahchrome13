@@ -11,7 +11,7 @@
                             <h2>Supplies Details</h2>
                                 
                                 <div class='text-center'>
-                                    <form action="supplies/{{ $a_supply->id }}" method="post">
+                                    <form action="supplies/{{ $supply->id }}" method="post">
                                         <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous Page</a>
                                         <input type="hidden" name="_method" value="delete">
                                         {{ csrf_field() }}
@@ -25,7 +25,7 @@
                             </div>
                             <div class="card-body">
                                 <div>
-                                    <h5 class="text-center">{{ $a_supply->name }}</h5>
+                                    <h5 class="text-center">{{ $supply->name }}</h5>
 
                                     <table class="table table-striped table-dark">
 
@@ -34,7 +34,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_supply->name }}</td>
+                                            <td>{{ $supply->name }}</td>
                                         </tr>
 
                                         <tr>
@@ -42,7 +42,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td class="text-center"><img src="{{ $a_supply->img }}" alt="supply picture"></th>
+                                            <td class="text-center"><img src="{{ $supply->img }}" alt="supply picture"></th>
                                         </tr>
 
                                         <tr>
@@ -50,7 +50,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_supply->type }}</td>
+                                            <td>{{ $supply->type }}</td>
                                         </tr>
 
                                         <tr>
@@ -58,7 +58,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_supply->description }}</td>
+                                            <td>{{ $supply->description }}</td>
                                         </tr>
 
                                         <tr>
@@ -66,7 +66,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>${{ $a_supply->price }}</td>
+                                            <td>${{ $supply->price }}</td>
                                         </tr>
 
                                         <tr>
@@ -74,13 +74,13 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_supply->stock }}</td>
+                                            <td>{{ $supply->stock }}</td>
                                         </tr>
                                         
                                     </table>                                
                                 </div>
                                 <div class="text-center">
-                                    <form action="supplies/{{ $a_supply->id }}" method="post">
+                                    <form action="supplies/{{ $supply->id }}" method="post">
                                         <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous Page</a>
                                         <input type="hidden" name="_method" value="delete">
                                         {{ csrf_field() }}

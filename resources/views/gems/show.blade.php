@@ -12,7 +12,7 @@
                                 
                                 <div class='text-center'>
                                     <form action="gems/{{ $gem->id }}" method="post">
-                                        <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous Page</a>
+                                        <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous</a>
                                         <input type="hidden" name="_method" value="delete">
                                         {{ csrf_field() }}
                                         
@@ -98,7 +98,7 @@
                                 </div>
                                 <div class="text-center">
                                     <form action="gems/{{ $gem->id }}" method="post">
-                                        <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous Page</a>
+                                        <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous</a>
                                         <input type="hidden" name="_method" value="delete">
                                         {{ csrf_field() }}
                                         

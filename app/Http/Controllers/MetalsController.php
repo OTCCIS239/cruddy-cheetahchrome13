@@ -14,10 +14,8 @@ class MetalsController extends Controller
      */
     public function index()
     {
-        //these are right
         $metals = Metal::all();
         return view('metals.index', compact('metals'));
-        //return view('metals.index');
     }
 
     /**
@@ -38,7 +36,18 @@ class MetalsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->Validate($request, [
+            'name'=> 'required|string',
+            'type'=> 'required|string',
+            'form'=> 'required|string',
+            'description'=> 'required|string',
+            'price'=> 'required|numeric',
+            'stock'=> 'required|numeric',
+            'img'=> 'required|string'
+       ]);
+
+       $metal = Metal::create($request->all());
+       return redirect('/metals/' . $metal->id);
     }
 
     /**
@@ -47,12 +56,10 @@ class MetalsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Metal $metal)
     {
-        //these are right
-        $a_metal = Metal::findOrFail($id);
-        return view('metals.show', compact('a_metal'));
-        //return view('metals.show');
+        // $metal = Metal::findOrFail($id);
+        return view('metals.show', compact('metal'));
     }
 
     /**
@@ -61,9 +68,9 @@ class MetalsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Metal $metal)
     {
-        //
+        return view('metals.edit', compact('metal'));
     }
 
     /**
@@ -73,9 +80,10 @@ class MetalsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Metal $metal)
     {
-        //
+        $metal->update($request->all());
+        return redirect('/metals/' . $metal->id);
     }
 
     /**
@@ -84,8 +92,9 @@ class MetalsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Metal $metal)
     {
-        //
+        $metal->delete();
+        return redirect('/metals');
     }
 }

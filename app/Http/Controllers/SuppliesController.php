@@ -14,10 +14,8 @@ class SuppliesController extends Controller
      */
     public function index()
     {
-        //these are right
         $supplies = Supply::all();
         return view('supplies.index', compact('supplies'));
-        //return view('supplies.index');
     }
 
     /**
@@ -36,9 +34,19 @@ class SuppliesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Supply $supply)
     {
-        //
+        $this->Validate($request, [
+            'name'=> 'required|string',
+            'type'=> 'required|string',
+            'description'=> 'required|string',
+            'price'=> 'required|numeric',
+            'stock'=> 'required|numeric',
+            'img'=> 'required|string'
+       ]);
+
+       $supply = Supply::create($request->all());
+       return redirect('/supplies/' . $supply->id);
     }
 
     /**
@@ -47,12 +55,10 @@ class SuppliesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Supply $supply)
     {
-        //these are right
-        $a_supply = Supply::findOrFail($id);
-        return view('supplies.show', compact('a_supply'));
-        //return view('supplies.show');
+        //$supply = Supply::findOrFail($id);
+        return view('supplies.show', compact('supply'));
     }
 
     /**
@@ -61,9 +67,9 @@ class SuppliesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Supply $supply)
     {
-        //
+        return view('supplies.edit', compact('supply'));
     }
 
     /**
@@ -73,9 +79,10 @@ class SuppliesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Supply $supply)
     {
-        //
+        $supply->update($request->all());
+        return redirect('/supplies/' . $supply->id);
     }
 
     /**
@@ -84,8 +91,9 @@ class SuppliesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Supply $supply)
     {
-        //
+        $supply->delete();
+        return redirect('/supplies');
     }
 }

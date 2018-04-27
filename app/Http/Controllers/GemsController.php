@@ -16,8 +16,7 @@ class GemsController extends Controller
     {
         //dd($gems);
         $gems = Gem::all();
-        return view('gems.index', compact('gems'));
-        
+        return view('gems.index', compact('gems'));  
     }
 
     /**
@@ -61,8 +60,6 @@ class GemsController extends Controller
      */
     public function show(Gem $gem)
     {
-        //Cant get this to work with model type hinting
-
         // $gem = Gem::findOrFail($id); 
         return view('gems.show', compact('gem'));
     }

@@ -11,7 +11,7 @@
                             <h2>Tools Details</h2>
                                 
                                 <div class='text-center'>
-                                    <form action="tools/{{ $a_tool->id }}" method="post">
+                                    <form action="tools/{{ $tool->id }}" method="post">
                                         <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous Page</a>
                                         <input type="hidden" name="_method" value="delete">
                                         {{ csrf_field() }}
@@ -25,7 +25,7 @@
                             </div>
                             <div class="card-body">
                                 <div>
-                                    <h5 class="text-center">{{ $a_tool->name }}</h5>
+                                    <h5 class="text-center">{{ $tool->name }}</h5>
 
                                     <table class="table table-striped table-dark">
 
@@ -34,7 +34,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_tool->name }}</td>
+                                            <td>{{ $tool->name }}</td>
                                         </tr>
 
                                         <tr>
@@ -42,7 +42,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td class="text-center"><img src="{{ $a_tool->img }}" alt="tool picture"></th>
+                                            <td class="text-center"><img src="{{ $tool->img }}" alt="tool picture"></th>
                                         </tr>
 
                                         <tr>
@@ -50,7 +50,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_tool->type }}</td>
+                                            <td>{{ $tool->type }}</td>
                                         </tr>
 
                                         <tr>
@@ -58,7 +58,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_tool->description }}</td>
+                                            <td>{{ $tool->description }}</td>
                                         </tr>
 
                                         <tr>
@@ -66,7 +66,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>${{ $a_tool->price }}</td>
+                                            <td>${{ $tool->price }}</td>
                                         </tr>
 
                                         <tr>
@@ -74,13 +74,13 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_tool->stock }}</td>
+                                            <td>{{ $tool->stock }}</td>
                                         </tr>
                                         
                                     </table>                                
                                 </div>
                                 <div class="text-center">
-                                    <form action="tools/{{ $a_tool->id }}" method="post">
+                                    <form action="tools/{{ $tool->id }}" method="post">
                                         <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous Page</a>
                                         <input type="hidden" name="_method" value="delete">
                                         {{ csrf_field() }}

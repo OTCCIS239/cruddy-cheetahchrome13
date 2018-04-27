@@ -13,13 +13,14 @@
                         <h5 class="text-center"></h5>
 
                         <table class="table table-striped table-dark">
+                            <form action="/jewelry" method="post">
+                             {{ csrf_field() }}
 
-                            <form>
+                              @include('jewelry.form')               
 
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <label for="jewelryNameInput">Jewelry Name</label>
                                     <input type="text" class="form-control" id="jewelryNameInput" required="required" aria-describedby="jewelryName" placeholder="Describe jewelry name">
-                                    <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
                                 </div>
 
                                 <div class="form-group">
@@ -52,11 +53,6 @@
                                     <option>/images/toolIcon.jpg</option>
                                     <option>/images/supplyIcon.jpg</option>
                                     </select>
-                                </div>
-                                
-                                <!-- <div class="form-group">
-                                    <label for="jewelryImageInput">Jewelry Image URL</label>
-                                    <input type="url" class="form-control" id="jewelryImageInput" pattern="" aria-describedby="jewelryImageUrl" placeholder="Enter image URL -- images/image.jpg&emsp;&emsp;This field not required">
                                 </div> -->
 
                                 <div class="text-center">

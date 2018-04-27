@@ -6,5 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tool extends Model
 {
-    protected $guarded = ['id'];
+    // protected $guarded = ['id'];
+    protected $fillable = [
+        'name',
+        'type',
+        'description',
+        'price',
+        'stock',
+        'img'
+    ];
 }

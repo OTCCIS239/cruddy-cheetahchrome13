@@ -20,8 +20,7 @@
                                   
                                         <tr>
                                             <th scope="col">Jewelry ID</th>
-                                            <th scope="col">Jewelry name</th>
-                                            <!-- <th scope="col">Jewelry Type</th> -->
+                                            <th scope="col">Jewelry name</th>                                           
                                             <th scope="col">Price</th>
                                             <th scope="col" class="text-right"></th>
                                         </tr>
@@ -29,7 +28,6 @@
                                         <tr>
                                             <td><a class="btn btn-info" href="jewelry/{{ $jewelry->id }}">Details <i class="fas fa-chevron-right"></i></a></td>
                                             <td>{{ $jewelry->name }}</td>
-                                            <!-- <td>{{ $jewelry->type }}</td> -->
                                             <td>${{ $jewelry->price }}</td>
                                             <td class="text-right"><a href="jewelry/{{ $jewelry->id }}/edit" class="btn btn-warning">Edit <i class="far fa-edit"></i></a></td>
                                         </tr>

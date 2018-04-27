@@ -14,10 +14,9 @@
 
                                     <table class="table table-striped table-dark">
                                         <form action="/gems" method="post">
+                                            {{ csrf_field() }}
 
-                                        {{ csrf_field() }}
-
-                                        @include('gems.form')
+                                            @include('gems.form')
                                         
                                             <div class="text-center">
                                                 <button type="submit" class="btn btn-warning"><i class="fab fa-telegram-plane"></i> Submit</button>

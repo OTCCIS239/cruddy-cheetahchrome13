@@ -11,7 +11,7 @@
                             <h2>Jewelry Details</h2>
                                 
                                 <div class='text-center'>
-                                    <form action="jewelry/{{ $a_jewelry->id }}" method="post">
+                                    <form action="jewelry/{{ $jewelry->id }}" method="post">
                                         <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous Page</a>
                                         <input type="hidden" name="_method" value="delete">
                                         {{ csrf_field() }}
@@ -25,7 +25,7 @@
                             </div>
                             <div class="card-body">
                                 <div>
-                                    <h5 class="text-center">{{ $a_jewelry->name }}</h5>
+                                    <h5 class="text-center">{{ $jewelry->name }}</h5>
 
                                     <table class="table table-striped table-dark">
 
@@ -34,7 +34,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_jewelry->name }}</td>
+                                            <td>{{ $jewelry->name }}</td>
                                         </tr>
 
                                         <tr>
@@ -42,7 +42,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td class="text-center"><img src="{{ $a_jewelry->img }}" alt="jewelry picture"></th>
+                                            <td class="text-center"><img src="{{ $jewelry->img }}" alt="jewelry picture"></th>
                                         </tr>
                                        
                                         <tr>
@@ -50,7 +50,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_jewelry->type }}</td>
+                                            <td>{{ $jewelry->type }}</td>
                                         </tr>
 
                                         <tr>
@@ -58,7 +58,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_jewelry->size }}</td>
+                                            <td>{{ $jewelry->size }}</td>
                                         </tr>
 
                                         <tr>
@@ -66,7 +66,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_jewelry->description }}</td>
+                                            <td>{{ $jewelry->description }}</td>
                                         </tr>
 
                                         <tr>
@@ -74,7 +74,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>${{ $a_jewelry->price }}</td>
+                                            <td>${{ $jewelry->price }}</td>
                                         </tr>
 
                                         <tr>
@@ -82,13 +82,13 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_jewelry->stock }}</td>
+                                            <td>{{ $jewelry->stock }}</td>
                                         </tr>
                                         
                                     </table>                                
                                 </div>
                                 <div class="text-center">
-                                    <form action="jewelry/{{ $a_jewelry->id }}" method="post">
+                                    <form action="jewelry/{{ $jewelry->id }}" method="post">
                                         <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous Page</a>
                                         <input type="hidden" name="_method" value="delete">
                                         {{ csrf_field() }}

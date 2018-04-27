@@ -14,12 +14,10 @@ class ToolsController extends Controller
      */
     public function index()
     {
-        //these are right
         $tools = Tool::all();
         return view('tools.index', compact('tools'));
-        //return view('tools.index');
     }
-
+    
     /**
      * Show the form for creating a new resource.
      *
@@ -38,7 +36,17 @@ class ToolsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->Validate($request, [
+            'name'=> 'required|string',
+            'type'=> 'required|string',
+            'description'=> 'required|string',
+            'price'=> 'required|numeric',
+            'stock'=> 'required|numeric',
+            'img'=> 'required|string'
+       ]);
+
+       $tool = Tool::create($request->all());
+       return redirect('/tools/' . $tool->id);
     }
 
     /**
@@ -47,12 +55,10 @@ class ToolsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Tool $tool)
     {
-        //these are right
-        $a_tool = Tool::findOrFail($id);
-        return view('tools.show', compact('a_tool'));
-        //return view('tools.show');
+        // $tool = Tool::findOrFail($id);
+        return view('tools.show', compact('tool'));
     }
 
     /**
@@ -61,9 +67,9 @@ class ToolsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Tool $tool)
     {
-        //
+        return view('tools.edit', compact('tool'));
     }
 
     /**
@@ -73,9 +79,10 @@ class ToolsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Tool $tool)
     {
-        //
+        $tool->update($request->all());
+        return redirect('/tools/' . $tool->id);
     }
 
     /**
@@ -84,8 +91,9 @@ class ToolsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Tool $tool)
     {
-        //
+        $tool->delete();
+        return redirect('/tools');
     }
 }

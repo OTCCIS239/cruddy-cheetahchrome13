@@ -13,53 +13,10 @@
                         <h5 class="text-center"></h5>
 
                         <table class="table table-striped table-dark">
-
                             <form action="/tools" method="post">
-
                             {{ csrf_field() }}
 
-                                <div class="form-group">
-                                    <label for="toolsNameInput">Tools Name</label>
-                                    <input type="text" class="form-control" id="toolsNameInput" required="required" aria-describedby="toolsName" placeholder="Describe tool name" value="{{ old('name') }}">
-                                    <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="toolsTypeInput">Tools Type</label>
-                                    <input type="text" class="form-control" id="toolsTypeInput" required="required" aria-describedby="toolsName" placeholder="Describe tool type" value="{{ old('type') }}">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="toolsDescriptionInput">Tools Description</label>
-                                    <textarea class="form-control" id="toolsDescriptionInput" required="required" rows="3" aria-describedby="toolsDescription" placeholder="Describe the tool" value="{{ old('description') }}"></textarea>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="toolsPriceInput">Tools Price</label>
-                                    <input type="number" class="form-control" id="toolsPriceInput" required="required" pattern="" aria-describedby="toolsPrice" placeholder="Enter tool price -- 0.00" value="{{ old('price') }}">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="toolsStockInput">Stock Amount</label>
-                                    <input type="number" class="form-control" id="toolsStockInput" required="required" pattern="" aria-describedby="toolsStock" placeholder="Enter stock amount -- 0" value="{{ old('stock') }}">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="toolsImageInput">Tools Image URL</label>
-                                    <select class="form-control" id="toolsImageInput" value="{{ old('img') }}">
-                                    <option>/images/default.jpg</option>
-                                    <option>/images/gemIcon.jpg</option>
-                                    <option>/images/jewelryIcon.jpg</option>
-                                    <option>/images/metalIcon.jpg</option>
-                                    <option>/images/toolIcon.jpg</option>
-                                    <option>/images/supplyIcon.jpg</option>
-                                    </select>
-                                </div>
-                                
-                                <!-- <div class="form-group">
-                                    <label for="toolsImageInput">Tools Image URL</label>
-                                    <input type="url" class="form-control" id="toolsImageInput" pattern="" aria-describedby="toolsImageUrl" placeholder="Enter image URL -- images/image.jpg&emsp;&emsp;This field not required">
-                                </div> -->
+                            @include('tools.form')
 
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-warning"><i class="fab fa-telegram-plane"></i> Submit</button>

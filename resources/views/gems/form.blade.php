@@ -28,7 +28,7 @@
 
                                             <div class="form-group">
                                                 <label for="gemPriceInput">Gem Price</label>
-                                                <input type="number" class="form-control" id="gemPriceInput" value="{{ @$gem ? $gem->price : '' }}" required="required" pattern="" aria-describedby="gemPrice" placeholder="Enter gem price -- 0.00">
+                                                <input type="number" class="form-control" id="gemPriceInput" value="{{ @$gem ? $gem->price : '' }}" aria-describedby="gemPrice" placeholder="Enter gem price -- 0.00">
                                             </div>
 
                                             <div class="form-group">

@@ -14,10 +14,8 @@ class JewelryController extends Controller
      */
     public function index()
     {
-        //these are right
         $jewelries = Jewelry::all();
         return view('jewelry.index', compact('jewelries'));
-        //return view('jewelry.index');
     }
 
     /**
@@ -38,7 +36,18 @@ class JewelryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->Validate($request, [
+            'name'=> 'required|string',
+            'type'=> 'required|string',
+            'size'=> 'required|string',
+            'description'=> 'required|string',
+            'price'=> 'required|numeric',
+            'stock'=> 'required|numeric',
+            'img'=> 'required|string'
+       ]);
+
+       $jewelry = Jewelry::create($request->all());
+       return redirect('/jewelry/' . $jewelry->id);
     }
 
     /**
@@ -47,12 +56,10 @@ class JewelryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Jewelry $jewelry)
     {
-         //these are right
-        $a_jewelry = Jewelry::findOrFail($id);
-        return view('jewelry.show', compact('a_jewelry'));
-        //return view('jewelry.show');
+        // $jewelry = Jewelry::findOrFail($id);
+        return view('jewelry.show', compact('jewelry'));
     }
 
     /**
@@ -61,9 +68,9 @@ class JewelryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Jewelry $jewelry)
     {
-        //
+        return view('jewelry.edit', compact('jewelry'));
     }
 
     /**
@@ -73,9 +80,10 @@ class JewelryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Jewelry $jewelry)
     {
-        //
+        $jewelry->update($request->all());
+        return redirect('/jewelry/' . $jewelry->id);
     }
 
     /**
@@ -84,8 +92,9 @@ class JewelryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Jewelry $jewelry)
     {
-        //
+        $jewelry->delete();
+        return redirect('/jewelry');
     }
 }
