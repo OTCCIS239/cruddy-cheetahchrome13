@@ -11,8 +11,15 @@
                             <h2>Jewelry Details</h2>
                                 
                                 <div class='text-center'>
-                                    <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous Page</a>
-                                    <a href="jewelry/edit" class="btn btn-warning">Edit Details <i class="far fa-edit"></i></a>
+                                    <form action="jewelry/{{ $a_jewelry->id }}" method="post">
+                                        <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous Page</a>
+                                        <input type="hidden" name="_method" value="delete">
+                                        {{ csrf_field() }}
+                                        
+                                        <button class="btn btn-danger">
+                                            Delete <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                    </form>
                                 </div>
 
                             </div>
@@ -81,8 +88,15 @@
                                     </table>                                
                                 </div>
                                 <div class="text-center">
-                                    <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous Page</a>
-                                    <a href="jewelry/edit" class="btn btn-warning">Edit Details <i class="far fa-edit"></i></a>
+                                    <form action="jewelry/{{ $a_jewelry->id }}" method="post">
+                                        <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous Page</a>
+                                        <input type="hidden" name="_method" value="delete">
+                                        {{ csrf_field() }}
+                                        
+                                        <button class="btn btn-danger">
+                                            Delete <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                    </form>
                                 </div>      
                             </div>
                         </div>

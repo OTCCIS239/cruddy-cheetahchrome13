@@ -22,15 +22,17 @@
                                         <tr>
                                             <th scope="col">Supply ID</th>
                                             <th scope="col">Supply name</th>
-                                            <th scope="col">Supply Type</th>
-                                            <th scope="col" class="text-right">Price</th>
+                                            <!-- <th scope="col">Supply Type</th> -->
+                                            <th scope="col">Price</th>
+                                            <th scope="col" class="text-right"></th>
                                         </tr>
                                    
                                         <tr>
                                             <td><a class="btn btn-info" href="supplies/{{ $supply->id }}">Details <i class="fas fa-chevron-right"></i></a></td>
                                             <td>{{ $supply->name }}</td>
-                                            <td>{{ $supply->type }}</td>
-                                            <td class="text-right">${{ $supply->price }}</td>
+                                            <!-- <td>{{ $supply->type }}</td> -->
+                                            <td>${{ $supply->price }}</td>
+                                            <td class="text-right"><a href="supplies/{{ $supply->id }}/edit" class="btn btn-warning">Edit <i class="far fa-edit"></i></a></td>
                                         </tr>
                                        
                                     <!--</table>-->       

@@ -31,7 +31,7 @@
 
                                 <div class="form-group">
                                     <label for="toolsDescriptionInput">Tools Description</label>
-                                    <textarea class="form-control" id="toolsDescriptionInput" rows="3" required="required" aria-describedby="toolsDescription" placeholder="Describe the tool" value="{{ old('description') }}"></textarea>
+                                    <textarea class="form-control" id="toolsDescriptionInput" required="required" rows="3" aria-describedby="toolsDescription" placeholder="Describe the tool" value="{{ old('description') }}"></textarea>
                                 </div>
 
                                 <div class="form-group">

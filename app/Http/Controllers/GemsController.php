@@ -14,14 +14,10 @@ class GemsController extends Controller
      */
     public function index()
     {
-        ////maybe wrong since I have a Gem model 
-        //$allGems = DB::table('gems')->get();
-
-        //these are right
-        $gems = Gem::all();
         //dd($gems);
+        $gems = Gem::all();
         return view('gems.index', compact('gems'));
-        //return view('gems.index');
+        
     }
 
     /**
@@ -42,7 +38,19 @@ class GemsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       $this->Validate($request, [
+            'name'=> 'required|string',
+            'type'=> 'required|string',
+            'cut'=> 'required|string',
+            'size'=> 'required|string',
+            'description'=> 'required|string',
+            'price'=> 'required|numeric',
+            'stock'=> 'required|numeric',
+            'img'=> 'required|string'
+       ]);
+
+       $gem = Gem::create($request->all());
+       return redirect('/gems/' . $gem->id);
     }
 
     /**
@@ -51,12 +59,12 @@ class GemsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Gem $gem)
     {
-        //these are right
-        $a_gem = Gem::findOrFail($id);
-        return view('gems.show', compact('a_gem'));
-        //return view('gems.show');
+        //Cant get this to work with model type hinting
+
+        // $gem = Gem::findOrFail($id); 
+        return view('gems.show', compact('gem'));
     }
 
     /**
@@ -65,9 +73,9 @@ class GemsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Gem $gem)
     {
-        //
+        return view('gems.edit', compact('gem'));
     }
 
     /**
@@ -77,9 +85,10 @@ class GemsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Gem $gem)
     {
-        //
+        $gem->update($request->all());
+        return redirect('/gems/' . $gem->id);
     }
 
     /**
@@ -88,8 +97,9 @@ class GemsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Gem $gem)
     {
-        //
+        $gem->delete();
+        return redirect('/gems');
     }
 }

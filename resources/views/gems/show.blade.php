@@ -11,14 +11,21 @@
                                 <h2>Gem Details</h2>
                                 
                                 <div class='text-center'>
-                                    <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous Page</a>
-                                    <a href="gems/edit" class="btn btn-warning">Edit Details <i class="far fa-edit"></i></a>
+                                    <form action="gems/{{ $gem->id }}" method="post">
+                                        <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous Page</a>
+                                        <input type="hidden" name="_method" value="delete">
+                                        {{ csrf_field() }}
+                                        
+                                        <button class="btn btn-danger">
+                                            Delete <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                    </form> 
                                 </div>
                                 
                             </div>
                             <div class="card-body">
                                 <div>
-                                    <h5 class="text-center">{{ $a_gem->name }}</h5>
+                                    <h5 class="text-center">{{ $gem->name }}</h5>
 
                                     <table class="table table-striped table-dark">
 
@@ -27,7 +34,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_gem->name }}</td>
+                                            <td>{{ $gem->name }}</td>
                                         </tr>
 
                                         <tr>
@@ -35,7 +42,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td class="text-center"><img src="{{ $a_gem->img }}" alt="gem picture"></td>
+                                            <td class="text-center"><img src="{{ $gem->img }}" alt="gem picture"></td>
                                         </tr>
 
                                         <tr>
@@ -43,14 +50,14 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_gem->type }}</td>
+                                            <td>{{ $gem->type }}</td>
 
                                         <tr>
                                             <th scope="col">Gem cut</th>
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_gem->cut }}</td>
+                                            <td>{{ $gem->cut }}</td>
                                         </tr>
 
                                         <tr>
@@ -58,7 +65,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_gem->size }}</td>
+                                            <td>{{ $gem->size }}</td>
                                         </tr>
 
                                         </tr>
@@ -68,7 +75,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_gem->description }}</td>
+                                            <td>{{ $gem->description }}</td>
                                         </tr>
 
                                         <tr>
@@ -76,7 +83,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>${{ $a_gem->price }}</td>
+                                            <td>${{ $gem->price }}</td>
                                         </tr>
 
                                         <tr>
@@ -84,14 +91,21 @@
                                         </tr>
 
                                         <tr>
-                                            <td>{{ $a_gem->stock }}</td>
+                                            <td>{{ $gem->stock }}</td>
                                         </tr>
                                         
                                     </table>                                
                                 </div>
                                 <div class="text-center">
-                                    <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous Page</a>
-                                    <a href="gems/edit" class="btn btn-warning">Edit Details <i class="far fa-edit"></i></a>
+                                    <form action="gems/{{ $gem->id }}" method="post">
+                                        <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous Page</a>
+                                        <input type="hidden" name="_method" value="delete">
+                                        {{ csrf_field() }}
+                                        
+                                        <button class="btn btn-danger">
+                                            Delete <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                    </form> 
                                 </div>      
                             </div>
                         </div>
