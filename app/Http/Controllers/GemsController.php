@@ -36,19 +36,24 @@ class GemsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateGemRequest $request)// tried using 'CreateGemRequest' type - hinting here 
     {
-    //    $this->Validate($request, [    
+    //    $this->Validate($request, [
+    //     'name'=> 'required',
+    //     'type'=> 'required',
+    //     'cut'=> 'required',
+    //     'size'=> 'required',
+    //     'description'=> 'required',
+    //     'price'=> 'required|numeric',
+    //     'stock'=> 'required|numeric',
+    //     'img'=> 'required'
     //    ]);
 
-          
-        /*DOESN'T CREATE A NEW RECORD ON THE TABLE--throws SQLSTATE[HY000]:
-            General error: 1364 Field 'name' doesn't have a default value --
-            THE INPUT FIELDS HAVE '' AS A DEFAULT VALUE IN THIS INSTANCE PER GEMS.FORM -- value="{{ @$gem ? $gem->name : '' }}"*/ 
+        /*DOESN'T CREATE A NEW RECORD ON THE TABLE*/   
         $gem = Gem::create($request->all());
+       
         
-        /*THIS BLOCK OF SUBSTITUTE TEST CODE THROWS AN SQL ERROR THAT SEES ALL THE INPUT FIELDS AS NULL -- NOT GETTING THE INPUT FIELDS?
-            THE INPUT FIELDS HAVE '' AS A DEFAULT VALUE IN THIS INSTANCE PER GEMS.FORM -- value="{{ @$gem ? $gem->name : '' }}" */
+        /* SUBSTITUTE TEST CODE DOESN'T WORK -- NOT GETTING THE INPUT FIELDS? */    
         // $gem = new Gem;
         // $gem->name = $request->name;
         // $gem->type = $request->type;
@@ -59,9 +64,11 @@ class GemsController extends Controller
         // $gem->stock = $request->stock;
         // $gem->img = $request->img;
         // $gem->save();
-                                                                                        
-    //    dd($gem);
-       return redirect('/gems/' . $gem->id); // REDIRECTS TO /GEMS/CREATE, SINCE NO NEW ID WAS CREATED?
+
+
+    //    dd($gem); // DOESN'T WORK HERE -- CODE NEVER REACHES HERE?                                                               
+        
+       return redirect('/gems/' . $gem->id); // 
     }
 
     /**
@@ -97,7 +104,7 @@ class GemsController extends Controller
     public function update(Request $request, Gem $gem)
     {
         $gem->update($request->all()); // DOESN'T UPDATE RECORD
-        // dd($gem); // DUMP SHOWS NO CHANGES ARE MADE TO ARRAY -- HAS DEFAULT VALUES IN THE INPUT FIELDS
+        // dd($gem); // DUMP SHOWS NO CHANGES ARE MADE TO ARRAY 
         return redirect('/gems/' . $gem->id); // REDIRECTS PROPER TO /GEMS/1
     }
 
