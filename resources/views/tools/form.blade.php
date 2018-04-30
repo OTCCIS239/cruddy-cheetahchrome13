@@ -11,12 +11,12 @@
 
     <div class="form-group">
         <label for="toolsDescriptionInput">Tools Description</label>
-        <textarea class="form-control" name="description" id="toolsDescriptionInput" value="{{ @$tool ? $tool->description : '' }}" required="required" rows="3" aria-describedby="toolsDescription" placeholder="Describe the tool"></textarea>
+        <textarea class="form-control" name="description" id="toolsDescriptionInput" required="required" rows="3" aria-describedby="toolsDescription" placeholder="Describe the tool">{{ @$tool ? $tool->description : '' }}</textarea>
     </div>
 
     <div class="form-group">
         <label for="toolsPriceInput">Tools Price</label>
-        <input type="number" name="price" class="form-control" id="toolsPriceInput" value="{{ @$tool ? $tool->price : '' }}" required="required" pattern="" aria-describedby="toolsPrice" placeholder="Enter tool price -- 0.00">
+        <input type="text" name="price" class="form-control" id="toolsPriceInput" value="{{ @$tool ? $tool->price : '' }}" required="required" pattern="^[+-]?[0-9]{1,3}(?:,?[0-9]{3})*\.[0-9]{2}$" aria-describedby="toolsPrice" placeholder="Enter tool price -- 0.00">
     </div>
 
     <div class="form-group">

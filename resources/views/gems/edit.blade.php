@@ -12,9 +12,7 @@
                             <div class="card-body">
                                 <div>
                                     <h5 class="text-center"></h5>
-
                                     <table class="table table-striped table-dark">
-
                                         <form action="/gems/{{ $gem->id }}" method="post">
                                             <input type="hidden" name="_method" value="PATCH">
                                             {{ csrf_field() }}
@@ -25,9 +23,7 @@
                                                 <button type="submit" class="btn btn-warning"><i class="fab fa-telegram-plane"></i> Submit</button>
                                                 <a href="javascript:history.back()" class="btn btn-danger">Cancel <i class="far fa-times-circle"></i></a>
                                             </div>
-
                                         </form>  
-           
                                     </table>                                
                                 </div>     
                             </div>

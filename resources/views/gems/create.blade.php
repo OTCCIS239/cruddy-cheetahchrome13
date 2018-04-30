@@ -11,7 +11,6 @@
                             <div class="card-body">
                                 <div>
                                     <h5 class="text-center"></h5>
-
                                     <table class="table table-striped table-dark">
                                         <form action="/gems" method="post">
                                             {{ csrf_field() }}
@@ -30,5 +29,5 @@
                     </div>
                 <div class="col-sm"></div>
             </div>
-    
+            
 @stop

@@ -6,13 +6,10 @@
                     <div class="col-sm"></div>
                     <div class="col-sm-9">
                         <div class="card text-white bg-dark mb-3">
-                            <div class="card-header text-center font-weight-bold text-white bg-secondary mb-3">
-                                       
+                            <div class="card-header text-center font-weight-bold text-white bg-secondary mb-3">       
                             <h2>Tools Details</h2>
-                                
                                 <div class='text-center'>
                                     <form action="/tools/{{ $tool->id }}" method="post">
-                                        <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous Page</a>
                                         <input type="hidden" name="_method" value="delete">
                                         {{ csrf_field() }}
                                         
@@ -21,12 +18,10 @@
                                         </button>
                                     </form> 
                                 </div>
-
                             </div>
                             <div class="card-body">
                                 <div>
                                     <h5 class="text-center">{{ $tool->name }}</h5>
-
                                     <table class="table table-striped table-dark">
 
                                         <tr>
@@ -80,15 +75,7 @@
                                     </table>                                
                                 </div>
                                 <div class="text-center">
-                                    <form action="/tools/{{ $tool->id }}" method="post">
                                         <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous Page</a>
-                                        <input type="hidden" name="_method" value="delete">
-                                        {{ csrf_field() }}
-                                        
-                                        <button class="btn btn-danger">
-                                            Delete <i class="fas fa-trash-alt"></i>
-                                        </button>
-                                    </form>   
                                 </div>      
                             </div>
                         </div>

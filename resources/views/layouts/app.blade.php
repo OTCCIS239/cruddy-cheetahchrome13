@@ -12,17 +12,14 @@
         <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     <!-- My styles -->
     <!--<link rel="stylesheet" type="text/css" href='@php (Route::is('home')) ? "./assets/cruddy.css" : "../assets/cruddy.css";  @endphp'/>-->
-    <!-- <link rel="stylesheet" type="text/css" href="cruddy.css"/> -->
+    <link rel="stylesheet" type="text/css" href="/css/cruddy.css"/>
     <title>On the Bench</title>
     <style type="text/css">
         li.active a {
             color: orange !important;
         }
         body {
-            /* LOLZ ugly AF but works for now */
-            /* background-image: url( {{ asset('images/bg1.jpg')}} ); */
             background-image: url(/images/bg1.jpg);
-            /*font-family: 'Raleway', sans-serif;*/
         }
         hr {
             width: 100%;

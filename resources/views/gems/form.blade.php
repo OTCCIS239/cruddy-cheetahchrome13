@@ -2,6 +2,7 @@
     <div class="form-group">
         <label for="gemNameInput">Gem Name</label>
         <input type="text" name="name" class="form-control" id="gemNameInput" value="{{ @$gem ? $gem->name : '' }}" required="required" placeholder="Describe gem name">
+        <!-- need javascript to repopulate fields on page return for entry errors if using is-invalid bootstrap class - blade limits you here-->
     </div>
 
     <div class="form-group">
@@ -21,12 +22,12 @@
 
     <div class="form-group">
         <label for="gemDescriptionInput">Gem Description</label>
-        <textarea class="form-control" name="description" id="gemDescriptionInput" value="{{ @$gem ? $gem->description : '' }}" rows="3" required="required" placeholder="Describe the gem"></textarea>
+        <textarea class="form-control" name="description" id="gemDescriptionInput" rows="3" required="required" placeholder="Describe the gem">{{ @$gem ? $gem->description : '' }}</textarea>
     </div>
 
     <div class="form-group">
         <label for="gemPriceInput">Gem Price</label>
-        <input type="number" name="price" class="form-control" id="gemPriceInput" value="{{ @$gem ? $gem->price : '' }}" pattern="" required="required" placeholder="Enter gem price -- 0.00">
+        <input type="text" name="price" class="form-control" id="gemPriceInput" value="{{ @$gem ? $gem->price : '' }}" pattern="^[+-]?[0-9]{1,3}(?:,?[0-9]{3})*\.[0-9]{2}$" required="required" placeholder="Enter gem price -- 0.00">
     </div>
 
     <div class="form-group">

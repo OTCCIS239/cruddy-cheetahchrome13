@@ -11,14 +11,12 @@
                             </div>
                             <div class="card-body">
                                 <div>
-
                                     <div class="text-center">
                                         <a href="gems/create" class="btn btn-warning gap">Create New <i class="far fa-file-alt"></i></a>
                                     </div>    
-
                                     <table class="table table-striped table-dark">
                                     @foreach ($gems as $gem)
-                                    
+
                                         <tr>
                                             <th scope="col"></th>
                                             <th scope="col">Gem name</th>
@@ -33,10 +31,9 @@
                                             <td>${{ $gem->price }}</td>
                                             <td class="text-right"><a href="gems/{{ $gem->id }}/edit" class="btn btn-warning">Edit <i class="far fa-edit"></i></a></td>
                                         </tr>
-
-                                    @endforeach
+                                        
+                                    @endforeach                               
                                     </table>
-
                                 </div>      
                             </div>
                         </div>

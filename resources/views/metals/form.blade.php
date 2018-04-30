@@ -17,12 +17,12 @@
 
     <div class="form-group">
         <label for="metalDescriptionInput">Metal Description</label>
-        <textarea class="form-control" name="description" id="metalDescriptionInput" value="{{ @$metal ? $metal->description : '' }}" rows="3" required="required" aria-describedby="metalDescription" placeholder="Describe the metal"></textarea>
+        <textarea class="form-control" name="description" id="metalDescriptionInput" rows="3" required="required" aria-describedby="metalDescription" placeholder="Describe the metal">{{ @$metal ? $metal->description : '' }}</textarea>
     </div>
 
     <div class="form-group">
         <label for="metalPriceInput">Metal Price</label>
-        <input type="number" name="price" class="form-control" id="metalPriceInput" value="{{ @$metal ? $metal->price : '' }}" required="required" pattern="" aria-describedby="metalPrice" placeholder="Enter metal price -- 0.00">
+        <input type="text" name="price" class="form-control" id="metalPriceInput" value="{{ @$metal ? $metal->price : '' }}" required="required" pattern="^[+-]?[0-9]{1,3}(?:,?[0-9]{3})*\.[0-9]{2}$" aria-describedby="metalPrice" placeholder="Enter metal price -- 0.00">
     </div>
 
     <div class="form-group">

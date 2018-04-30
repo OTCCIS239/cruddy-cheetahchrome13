@@ -15,12 +15,12 @@
 
     <div class="form-group">
         <label for="jewelryDescriptionInput">Jewelry Description</label>
-        <textarea class="form-control" type="text" name="description" id="jewelryDescriptionInput" value="{{ @$jewelry ? $jewelry->description : '' }}" rows="3 required="required" aria-describedby="jewelryDescription" placeholder="Describe the jewelry""></textarea>
+        <textarea class="form-control" type="text" name="description" id="jewelryDescriptionInput" rows="3 required="required" aria-describedby="jewelryDescription" placeholder="Describe the jewelry"">{{ @$jewelry ? $jewelry->description : '' }}</textarea>
     </div>
 
     <div class="form-group">
         <label for="jewelryPriceInput">Jewelry Price</label>
-        <input type="number" name="price" class="form-control" id="jewelryPriceInput" value="{{ @$jewelry ? $jewelry->price : '' }}" required="required" pattern="" aria-describedby="jewelryPrice" placeholder="Enter jewelry price -- 0.00">
+        <input type="text" name="price" class="form-control" id="jewelryPriceInput" value="{{ @$jewelry ? $jewelry->price : '' }}" required="required" pattern="^[+-]?[0-9]{1,3}(?:,?[0-9]{3})*\.[0-9]{2}$" aria-describedby="jewelryPrice" placeholder="Enter jewelry price -- 0.00">
     </div>
 
     <div class="form-group">

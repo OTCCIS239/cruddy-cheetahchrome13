@@ -1,5 +1,5 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
-    <a class="navbar-brand" href="#">On The Bench</a>
+    <a class="navbar-brand" href="#"><img src="/images/logo.png" alt=""></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"><span class="navbar-toggler-icon"></span></button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
