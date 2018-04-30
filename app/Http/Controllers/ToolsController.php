@@ -37,9 +37,6 @@ class ToolsController extends Controller
      */
     public function store(CreateToolRequest $request)
     {
-    //     $this->Validate($request, [
-    //    ]);
-
        $tool = Tool::create($request->all());
        return redirect('/tools/' . $tool->id);
     }
@@ -52,7 +49,6 @@ class ToolsController extends Controller
      */
     public function show(Tool $tool)
     {
-        // $tool = Tool::findOrFail($id);
         return view('tools.show', compact('tool'));
     }
 

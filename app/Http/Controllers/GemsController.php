@@ -36,38 +36,11 @@ class GemsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CreateGemRequest $request)// tried using 'CreateGemRequest' type - hinting here 
+    public function store(CreateGemRequest $request) 
     {
-    //    $this->Validate($request, [
-    //     'name'=> 'required',
-    //     'type'=> 'required',
-    //     'cut'=> 'required',
-    //     'size'=> 'required',
-    //     'description'=> 'required',
-    //     'price'=> 'required|numeric',
-    //     'stock'=> 'required|numeric',
-    //     'img'=> 'required'
-    //    ]);
-   
         $gem = Gem::create($request->all());
-       
-        
-        /* SUBSTITUTE TEST CODE  */    
-        // $gem = new Gem;
-        // $gem->name = $request->name;
-        // $gem->type = $request->type;
-        // $gem->cut = $request->cut;
-        // $gem->size = $request->size;
-        // $gem->description = $request->description;
-        // $gem->price = $request->price;
-        // $gem->stock = $request->stock;
-        // $gem->img = $request->img;
-        // $gem->save();
-
-
     //    dd($gem);                                                             
-        
-       return redirect('/gems/' . $gem->id); // 
+       return redirect('/gems/' . $gem->id);  
     }
 
     /**
@@ -78,7 +51,6 @@ class GemsController extends Controller
      */
     public function show(Gem $gem)
     {
-        // $gem = Gem::findOrFail($id); 
         return view('gems.show', compact('gem'));
     }
 

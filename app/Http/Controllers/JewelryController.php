@@ -37,9 +37,6 @@ class JewelryController extends Controller
      */
     public function store(CreateJewelryRequest $request)
     {
-    //     $this->Validate($request, [
-    //    ]);
-
        $jewelry = Jewelry::create($request->all());
     //    dd($jewelry);
        return redirect('/jewelry/' . $jewelry->id);
@@ -53,7 +50,6 @@ class JewelryController extends Controller
      */
     public function show(Jewelry $jewelry)
     {
-        // $jewelry = Jewelry::findOrFail($id);
         return view('jewelry.show', compact('jewelry'));
     }
 

@@ -37,9 +37,6 @@ class MetalsController extends Controller
      */
     public function store(CreateMetalRequest $request)
     {
-    //     $this->Validate($request, [
-    //    ]);
-
        $metal = Metal::create($request->all());
        return redirect('/metals/' . $metal->id);
     }
@@ -52,7 +49,6 @@ class MetalsController extends Controller
      */
     public function show(Metal $metal)
     {
-        // $metal = Metal::findOrFail($id);
         return view('metals.show', compact('metal'));
     }
 
