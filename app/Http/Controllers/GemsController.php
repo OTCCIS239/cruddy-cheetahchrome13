@@ -48,12 +48,11 @@ class GemsController extends Controller
     //     'stock'=> 'required|numeric',
     //     'img'=> 'required'
     //    ]);
-
-        /*DOESN'T CREATE A NEW RECORD ON THE TABLE*/   
+   
         $gem = Gem::create($request->all());
        
         
-        /* SUBSTITUTE TEST CODE DOESN'T WORK -- NOT GETTING THE INPUT FIELDS? */    
+        /* SUBSTITUTE TEST CODE  */    
         // $gem = new Gem;
         // $gem->name = $request->name;
         // $gem->type = $request->type;
@@ -66,7 +65,7 @@ class GemsController extends Controller
         // $gem->save();
 
 
-    //    dd($gem); // DOESN'T WORK HERE -- CODE NEVER REACHES HERE?                                                               
+    //    dd($gem);                                                             
         
        return redirect('/gems/' . $gem->id); // 
     }
@@ -101,11 +100,11 @@ class GemsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Gem $gem)
+    public function update(CreateGemRequest $request, Gem $gem)
     {
-        $gem->update($request->all()); // DOESN'T UPDATE RECORD
-        // dd($gem); // DUMP SHOWS NO CHANGES ARE MADE TO ARRAY 
-        return redirect('/gems/' . $gem->id); // REDIRECTS PROPER TO /GEMS/1
+        $gem->update($request->all()); 
+        // dd($gem); 
+        return redirect('/gems/' . $gem->id); 
     }
 
     /**
@@ -116,9 +115,9 @@ class GemsController extends Controller
      */
     public function destroy(Gem $gem)
     {
-        // dd($gem); // DUMP DOESN'T WORK HERE
-        $gem->delete(); // DOESN'T DELETE RECORD
-        return redirect('/gems'); // REDIRECTS TO /GEMS/GEMS/1, NOT TO /GEMS, SINCE THE ID WASN'T DESTROYED?
+        // dd($gem);
+        $gem->delete(); 
+        return redirect('/gems'); 
         
     }
 }

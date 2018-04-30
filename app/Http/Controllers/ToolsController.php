@@ -74,7 +74,7 @@ class ToolsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tool $tool)
+    public function update(CreateToolRequest $request, Tool $tool)
     {
         $tool->update($request->all());
         return redirect('/tools/' . $tool->id);

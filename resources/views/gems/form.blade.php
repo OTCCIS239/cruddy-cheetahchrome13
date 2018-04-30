@@ -1,42 +1,42 @@
 
     <div class="form-group">
         <label for="gemNameInput">Gem Name</label>
-        <input type="text" class="form-control" id="gemNameInput" value="{{ @$gem ? $gem->name : '' }}" required="required" placeholder="Describe gem name">
+        <input type="text" name="name" class="form-control" id="gemNameInput" value="{{ @$gem ? $gem->name : '' }}" required="required" placeholder="Describe gem name">
     </div>
 
     <div class="form-group">
         <label for="gemTypeInput">Gem Type</label>
-        <input type="text" class="form-control" id="gemTypeInput" value="{{ @$gem ? $gem->type : '' }}" required="required" placeholder="Describe gem type">
+        <input type="text" name="type" class="form-control" id="gemTypeInput" value="{{ @$gem ? $gem->type : '' }}" required="required" placeholder="Describe gem type">
     </div>
 
     <div class="form-group">
         <label for="gemCutInput">Gem Cut</label>
-        <input type="text" class="form-control" id="gemCutInput" value="{{ @$gem ? $gem->cut : '' }}" required="required" placeholder="Describe gem cut">
+        <input type="text" name="cut" class="form-control" id="gemCutInput" value="{{ @$gem ? $gem->cut : '' }}" required="required" placeholder="Describe gem cut">
     </div>
 
     <div class="form-group">
         <label for="gemSizeInput">Gem Size</label>
-        <input type="text" class="form-control" id="gemSizeInput" value="{{ @$gem ? $gem->size : '' }}" required="required" placeholder="Describe gem size">
+        <input type="text" name="size" class="form-control" id="gemSizeInput" value="{{ @$gem ? $gem->size : '' }}" required="required" placeholder="Describe gem size">
     </div>
 
     <div class="form-group">
         <label for="gemDescriptionInput">Gem Description</label>
-        <textarea class="form-control" id="gemDescriptionInput" value="{{ @$gem ? $gem->description : '' }}" rows="3" required="required" placeholder="Describe the gem"></textarea>
+        <textarea class="form-control" name="description" id="gemDescriptionInput" value="{{ @$gem ? $gem->description : '' }}" rows="3" required="required" placeholder="Describe the gem"></textarea>
     </div>
 
     <div class="form-group">
         <label for="gemPriceInput">Gem Price</label>
-        <input type="number" class="form-control" id="gemPriceInput" value="{{ @$gem ? $gem->price : '' }}" required="required" pattern="" placeholder="Enter gem price -- 0.00">
+        <input type="number" name="price" class="form-control" id="gemPriceInput" value="{{ @$gem ? $gem->price : '' }}" pattern="" required="required" placeholder="Enter gem price -- 0.00">
     </div>
 
     <div class="form-group">
         <label for="gemStockInput">Stock Amount</label>
-        <input type="number" class="form-control" id="gemStockInput" value="{{ @$gem ? $gem->stock : '' }}" required="required" pattern="" placeholder="Enter stock amount -- 0">
+        <input type="number" name="stock" class="form-control" id="gemStockInput" value="{{ @$gem ? $gem->stock : '' }}" pattern="" required="required" placeholder="Enter stock amount -- 0">
     </div>
 
     <div class="form-group">
         <label for="gemImageInput">Gem Image URL</label>
-        <select class="form-control" id="gemImageInput" value="{{ @$gem ? $gem->img : '' }}" >
+        <select name="img" class="form-control" id="gemImageInput" required="required" value="{{ @$gem ? $gem->img : '' }}" >
             <option>/images/default.jpg</option>
             <option>/images/gemIcon.jpg</option>
             <option>/images/jewelryIcon.jpg</option>

@@ -75,10 +75,10 @@ class JewelryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Jewelry $jewelry)
+    public function update(CreateJewelryRequest $request, Jewelry $jewelry)
     {
         $jewelry->update($request->all());
-        dd($jewelry);
+        //dd($jewelry);
         return redirect('/jewelry/' . $jewelry->id);
     }
 

@@ -74,7 +74,7 @@ class SuppliesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Supply $supply)
+    public function update(CreateSupplyRequest $request, Supply $supply)
     {
         $supply->update($request->all());
         return redirect('/supplies/' . $supply->id);

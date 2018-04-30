@@ -13,7 +13,7 @@
                         <h5 class="text-center"></h5>
 
                         <table class="table table-striped table-dark">
-                            <form action="/gems" method="post">
+                            <form action="/metals" method="post">
                                 {{ csrf_field() }}
 
                                 @include('metals.form')

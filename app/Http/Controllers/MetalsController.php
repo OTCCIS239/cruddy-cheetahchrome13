@@ -74,7 +74,7 @@ class MetalsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Metal $metal)
+    public function update(CreateMetalRequest $request, Metal $metal)
     {
         $metal->update($request->all());
         return redirect('/metals/' . $metal->id);

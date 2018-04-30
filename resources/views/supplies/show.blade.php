@@ -80,7 +80,7 @@
                                     </table>                                
                                 </div>
                                 <div class="text-center">
-                                    <form action="supplies/{{ $supply->id }}" method="post">
+                                    <form action="/supplies/{{ $supply->id }}" method="post">
                                         <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous Page</a>
                                         <input type="hidden" name="_method" value="delete">
                                         {{ csrf_field() }}

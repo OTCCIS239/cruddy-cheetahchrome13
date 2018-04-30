@@ -11,7 +11,7 @@
                             <h2>Jewelry Details</h2>
                                 
                                 <div class='text-center'>
-                                    <form action="jewelry/{{ $jewelry->id }}" method="post">
+                                    <form action="/jewelry/{{ $jewelry->id }}" method="post">
                                         <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous Page</a>
                                         <input type="hidden" name="_method" value="delete">
                                         {{ csrf_field() }}
@@ -88,7 +88,7 @@
                                     </table>                                
                                 </div>
                                 <div class="text-center">
-                                    <form action="jewelry/{{ $jewelry->id }}" method="post">
+                                    <form action="/jewelry/{{ $jewelry->id }}" method="post">
                                         <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous Page</a>
                                         <input type="hidden" name="_method" value="delete">
                                         {{ csrf_field() }}
