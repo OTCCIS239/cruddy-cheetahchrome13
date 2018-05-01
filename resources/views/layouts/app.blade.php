@@ -19,7 +19,7 @@
             color: orange !important;
         }
         body {
-            background-image: url(/images/bg1.jpg);
+            background-image: url(/images/bg.png);
         }
         hr {
             width: 100%;
