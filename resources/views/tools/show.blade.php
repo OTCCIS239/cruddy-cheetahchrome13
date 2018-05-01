@@ -13,7 +13,7 @@
                                         <input type="hidden" name="_method" value="delete">
                                         {{ csrf_field() }}
                                         
-                                        <button class="btn btn-danger">
+                                        <button class="btn btn-outline-warning">
                                             Delete <i class="fas fa-trash-alt"></i>
                                         </button>
                                     </form> 
@@ -75,7 +75,7 @@
                                     </table>                                
                                 </div>
                                 <div class="text-center">
-                                        <a href="javascript:history.back()" class="btn btn-info"><i class="fas fa-chevron-left"></i> Previous Page</a>
+                                        <a href="javascript:history.back()" class="btn btn-outline-info"><i class="fas fa-chevron-left"></i> Previous Page</a>
                                 </div>      
                             </div>
                         </div>

@@ -12,7 +12,7 @@
                             <div class="card-body">
                                 <div>
                                     <div class="text-center">
-                                        <a href="gems/create" class="btn btn-warning gap">Create New <i class="far fa-file-alt"></i></a>
+                                        <a href="gems/create" class="btn btn-outline-success gap">Create New <i class="far fa-file-alt"></i></a>
                                     </div>    
                                     <table class="table table-striped table-dark">
                                     @foreach ($gems as $gem)
@@ -26,10 +26,10 @@
                                         </tr>
                                    
                                         <tr>
-                                            <td><a class="btn btn-info" href="gems/{{ $gem->id }}">Details <i class="fas fa-chevron-right"></i></a></td>
+                                            <td><a class="btn btn-outline-info" href="gems/{{ $gem->id }}">Details <i class="fas fa-chevron-right"></i></a></td>
                                             <td>{{ $gem->name }}</td>
                                             <td>${{ $gem->price }}</td>
-                                            <td class="text-right"><a href="gems/{{ $gem->id }}/edit" class="btn btn-warning">Edit <i class="far fa-edit"></i></a></td>
+                                            <td class="text-right"><a href="gems/{{ $gem->id }}/edit" class="btn btn-outline-warning">Edit <i class="far fa-edit"></i></a></td>
                                         </tr>
                                         
                                     @endforeach                               

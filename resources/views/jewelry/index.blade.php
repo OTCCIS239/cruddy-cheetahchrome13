@@ -12,7 +12,7 @@
                                 <div>
 
                                     <div class="text-center">
-                                        <a href="jewelry/create" class="btn btn-warning gap">Create New <i class="far fa-file-alt"></i></a>
+                                        <a href="jewelry/create" class="btn btn-outline-success gap">Create New <i class="far fa-file-alt"></i></a>
                                     </div>    
 
                                     <table class="table table-striped table-dark">
@@ -26,10 +26,10 @@
                                         </tr>
                                    
                                         <tr>
-                                            <td><a class="btn btn-info" href="jewelry/{{ $jewelry->id }}">Details <i class="fas fa-chevron-right"></i></a></td>
+                                            <td><a class="btn btn-outline-info" href="jewelry/{{ $jewelry->id }}">Details <i class="fas fa-chevron-right"></i></a></td>
                                             <td>{{ $jewelry->name }}</td>
                                             <td>${{ $jewelry->price }}</td>
-                                            <td class="text-right"><a href="jewelry/{{ $jewelry->id }}/edit" class="btn btn-warning">Edit <i class="far fa-edit"></i></a></td>
+                                            <td class="text-right"><a href="jewelry/{{ $jewelry->id }}/edit" class="btn btn-outline-warning">Edit <i class="far fa-edit"></i></a></td>
                                         </tr>
                                        
                                     <!--</table>-->       

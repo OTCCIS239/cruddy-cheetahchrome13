@@ -10,11 +10,9 @@
                             </div>
                             <div class="card-body">
                                 <div>
-
                                     <div class="text-center">
-                                        <a href="metals/create" class="btn btn-warning gap">Create New <i class="far fa-file-alt"></i></a>
+                                        <a href="metals/create" class="btn btn-outline-success gap">Create New <i class="far fa-file-alt"></i></a>
                                     </div>    
-
                                     <table class="table table-striped table-dark">
                                     @foreach ($metals as $metal)
                                    
@@ -26,10 +24,10 @@
                                         </tr>
                                    
                                         <tr>
-                                            <td><a class="btn btn-info" href="metals/{{ $metal->id }}">Details <i class="fas fa-chevron-right"></i></a></td>
+                                            <td><a class="btn btn-outline-info" href="metals/{{ $metal->id }}">Details <i class="fas fa-chevron-right"></i></a></td>
                                             <td>{{ $metal->name }}</td>
                                             <td>${{ $metal->price }}</td>
-                                            <td class="text-right"><a href="metals/{{ $metal->id }}/edit" class="btn btn-warning">Edit <i class="far fa-edit"></i></a></td>
+                                            <td class="text-right"><a href="metals/{{ $metal->id }}/edit" class="btn btn-outline-warning">Edit <i class="far fa-edit"></i></a></td>
                                         </tr>
                                        
                                     @endforeach

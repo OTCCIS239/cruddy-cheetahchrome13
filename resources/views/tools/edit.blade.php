@@ -21,8 +21,8 @@
                                 @include('tools.form')
                                
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-warning"><i class="fab fa-telegram-plane"></i> Submit</button>
-                                    <a href="javascript:history.back()" class="btn btn-danger">Cancel <i class="far fa-times-circle"></i></a>
+                                    <button type="submit" class="btn btn-outline-success"><i class="fab fa-telegram-plane"></i> Submit</button>
+                                    <a href="javascript:history.back()" class="btn btn-outline-warning">Cancel <i class="far fa-times-circle"></i></a>
                                 </div>
                                 
                             </form>  

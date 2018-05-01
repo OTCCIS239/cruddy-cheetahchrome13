@@ -5,9 +5,9 @@
 @endsection
 
 @section('scripts')
-<!-- <script>
-    $(function() {
-        alert('Hello and welcome to my home page')
-    })
-</script> -->
+<script>
+    // $(function() {
+    //     alert('Hello and welcome to my home page')
+    // })
+</script>
 @endsection

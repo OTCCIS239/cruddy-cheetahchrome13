@@ -12,7 +12,7 @@
                                 <div>
 
                                     <div class="text-center">
-                                        <a href="tools/create" class="btn btn-warning gap">Create New <i class="far fa-file-alt"></i></a>
+                                        <a href="tools/create" class="btn btn-outline-success gap">Create New <i class="far fa-file-alt"></i></a>
                                     </div>    
 
                                     <table class="table table-striped table-dark">
@@ -28,11 +28,11 @@
                                         </tr>
                                    
                                         <tr>
-                                            <td><a class="btn btn-info" href="tools/{{ $tool->id }}">Details <i class="fas fa-chevron-right"></i></a></td>
+                                            <td><a class="btn btn-outline-info" href="tools/{{ $tool->id }}">Details <i class="fas fa-chevron-right"></i></a></td>
                                             <td>{{ $tool->name }}</td>
                                             <!-- <td>{{ $tool->type }}</td> -->
                                             <td>${{ $tool->price }}</td>
-                                            <td class="text-right"><a href="tools/{{ $tool->id }}/edit" class="btn btn-warning">Edit <i class="far fa-edit"></i></a></td>
+                                            <td class="text-right"><a href="tools/{{ $tool->id }}/edit" class="btn btn-outline-warning">Edit <i class="far fa-edit"></i></a></td>
                                         </tr>
                                        
                                     <!--</table>-->       
